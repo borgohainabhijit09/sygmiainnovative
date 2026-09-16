@@ -3,6 +3,8 @@ import { SERVICES_DATA } from '@/content/services';
 import { INDUSTRIES_DATA } from '@/content/industries';
 import { WORK_DATA } from '@/content/work';
 
+export const dynamic = 'force-static';
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://sygmiainnovative.co.in';
 

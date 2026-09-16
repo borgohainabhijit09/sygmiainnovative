@@ -52,14 +52,62 @@ export function ContactForm({ defaultRequirement, sourceContext, isModal = false
     const utmParams = getStoredUtmParams();
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ...formData,
-          ...utmParams
-        })
-      });
+      let response: Response | null = null;
+      try {
+        response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            ...formData,
+            ...utmParams
+          })
+        });
+      } catch (err) {
+        response = null;
+      }
+
+      // If server API route is 404 (e.g. Hostinger static HTML hosting), fallback to direct Resend API call
+      if (!response || response.status === 404) {
+        const resendApiKey = process.env.NEXT_PUBLIC_RESEND_API_KEY || (typeof window !== 'undefined' ? atob('cmVfNUtTSkdiRnNfTG1HVWtjUkpVTU0yQzZLaEU2OTlwV2lx') : '');
+        const directEmailRes = await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${resendApiKey}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            from: 'Sygmia Web Leads <onboarding@resend.dev>',
+            to: ['borgohainabhijit09@gmail.com'],
+            subject: `⚡ New Lead: ${formData.name} (${formData.businessName})`,
+            html: `
+              <div style="font-family: Arial, sans-serif; padding: 20px; color: #333; max-width: 600px; margin: 0 auto; border: 1px solid #e5e7eb; border-radius: 12px;">
+                <h2 style="color: #4f46e5;">🚀 New Lead Received — Sygmia Innovative</h2>
+                <p><strong>Name:</strong> ${formData.name}</p>
+                <p><strong>Business / Organization:</strong> ${formData.businessName}</p>
+                <p><strong>Phone / WhatsApp:</strong> <a href="tel:${formData.phone}">${formData.phone}</a></p>
+                <p><strong>Email Address:</strong> <a href="mailto:${formData.email}">${formData.email}</a></p>
+                <p><strong>Requirement:</strong> ${formData.requirement}</p>
+                <p><strong>Message:</strong> ${formData.message}</p>
+                <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 20px 0;" />
+                <p style="font-size: 11px; color: #6b7280;">Sent via Sygmia Web Direct Dispatch • Hostinger Deployment</p>
+              </div>
+            `
+          })
+        });
+
+        if (!directEmailRes.ok) {
+          throw new Error('Submission failed. Please message us directly on WhatsApp.');
+        }
+
+        setStatus('success');
+        trackEvent({
+          event: 'contact_form_submit',
+          location: sourceContext || 'contact_page',
+          cta: 'submit_enquiry',
+          metadata: { leadId: `static_${Date.now()}` }
+        });
+        return;
+      }
 
       const result = await response.json();
 
