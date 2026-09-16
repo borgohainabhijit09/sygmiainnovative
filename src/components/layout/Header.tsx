@@ -109,14 +109,14 @@ export function Header() {
               Home
             </Link>
 
-            {/* Services Dropdown (Seamless Hover Bridge) */}
+            {/* Services Mega Menu (Seamless Hover Bridge) */}
             <div 
               className="relative py-2"
               onMouseEnter={() => setServicesDropdown(true)}
               onMouseLeave={() => setServicesDropdown(false)}
             >
               <button 
-                className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-indigo-400 cursor-pointer ${
+                className={`flex items-center gap-1.5 text-sm font-medium transition-colors hover:text-indigo-400 cursor-pointer ${
                   pathname.startsWith('/services') ? 'text-indigo-400 font-semibold' : 'text-slate-300'
                 }`}
               >
@@ -124,134 +124,180 @@ export function Header() {
               </button>
 
               {servicesDropdown && (
-                <div className="absolute top-full left-0 pt-2 w-[420px] z-50 animate-in fade-in slide-in-from-top-2 duration-150">
-                  <div className="rounded-2xl glass-card p-4 border border-white/10 shadow-2xl bg-[#0b0f17]/98 backdrop-blur-xl">
-                    <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider px-3 py-1 mb-2">Core Solutions</div>
-                    <div className="grid grid-cols-2 gap-1">
-                      <Link 
-                        href="/services/business-websites"
-                        className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-white/5 transition-colors group"
-                      >
-                        <div className="p-1.5 rounded-lg bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 group-hover:bg-indigo-500 group-hover:text-white transition-colors shrink-0">
-                          <Globe className="w-3.5 h-3.5" />
-                        </div>
-                        <div>
-                          <div className="text-xs font-semibold text-white group-hover:text-indigo-300">Business Websites</div>
-                          <div className="text-[10px] text-slate-400 leading-tight">Digital presence</div>
-                        </div>
-                      </Link>
+                <div className="absolute top-full -left-44 pt-3 w-[780px] z-50 animate-in fade-in zoom-in-95 slide-in-from-top-3 duration-200">
+                  <div className="rounded-3xl glass-card p-6 border border-white/10 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] bg-[#070a11]/98 backdrop-blur-2xl grid grid-cols-12 gap-6 relative overflow-hidden">
+                    {/* Background glow accent inside mega menu */}
+                    <div className="absolute -top-10 -left-10 w-48 h-48 bg-indigo-600/10 blur-3xl rounded-full pointer-events-none" />
+                    
+                    {/* Left Column: Get Online */}
+                    <div className="col-span-4 space-y-3 relative z-10 border-r border-white/5 pr-4">
+                      <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-[10px] font-bold text-indigo-300 w-max tracking-wider uppercase">
+                        <span>Get Online</span>
+                      </div>
+                      
+                      <div className="space-y-1">
+                        <Link 
+                          href="/services/business-websites"
+                          className="flex items-start gap-3 p-2.5 rounded-2xl hover:bg-white/5 transition-all group border border-transparent hover:border-white/5"
+                        >
+                          <div className="p-2 rounded-xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 group-hover:bg-indigo-500 group-hover:text-white transition-all shrink-0">
+                            <Globe className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <div className="text-xs font-bold text-white group-hover:text-indigo-300">Business Websites</div>
+                            <div className="text-[10px] text-slate-400 leading-tight">High-conversion brand sites</div>
+                          </div>
+                        </Link>
 
-                      <Link 
-                        href="/services/website-redesign"
-                        className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-white/5 transition-colors group"
-                      >
-                        <div className="p-1.5 rounded-lg bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 group-hover:bg-cyan-500 group-hover:text-white transition-colors shrink-0">
-                          <RefreshCw className="w-3.5 h-3.5" />
-                        </div>
-                        <div>
-                          <div className="text-xs font-semibold text-white group-hover:text-cyan-300">Website Redesign</div>
-                          <div className="text-[10px] text-slate-400 leading-tight">UI/UX & speed</div>
-                        </div>
-                      </Link>
+                        <Link 
+                          href="/services/website-redesign"
+                          className="flex items-start gap-3 p-2.5 rounded-2xl hover:bg-white/5 transition-all group border border-transparent hover:border-white/5"
+                        >
+                          <div className="p-2 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 group-hover:bg-cyan-500 group-hover:text-white transition-all shrink-0">
+                            <RefreshCw className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <div className="text-xs font-bold text-white group-hover:text-cyan-300">Website Redesign</div>
+                            <div className="text-[10px] text-slate-400 leading-tight">Speed & UI/UX overhaul</div>
+                          </div>
+                        </Link>
 
-                      <Link 
-                        href="/services/ecommerce"
-                        className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-white/5 transition-colors group"
-                      >
-                        <div className="p-1.5 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 group-hover:bg-emerald-500 group-hover:text-white transition-colors shrink-0">
-                          <ShoppingCart className="w-3.5 h-3.5" />
-                        </div>
-                        <div>
-                          <div className="text-xs font-semibold text-white group-hover:text-emerald-300">E-commerce</div>
-                          <div className="text-[10px] text-slate-400 leading-tight">Commission-free stores</div>
-                        </div>
-                      </Link>
+                        <Link 
+                          href="/services/ecommerce"
+                          className="flex items-start gap-3 p-2.5 rounded-2xl hover:bg-white/5 transition-all group border border-transparent hover:border-white/5"
+                        >
+                          <div className="p-2 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 group-hover:bg-emerald-500 group-hover:text-white transition-all shrink-0">
+                            <ShoppingCart className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <div className="text-xs font-bold text-white group-hover:text-emerald-300">E-commerce Stores</div>
+                            <div className="text-[10px] text-slate-400 leading-tight">Direct online product sales</div>
+                          </div>
+                        </Link>
+                      </div>
 
-                      <Link 
-                        href="/services/lead-management"
-                        className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-white/5 transition-colors group"
-                      >
-                        <div className="p-1.5 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20 group-hover:bg-amber-500 group-hover:text-white transition-colors shrink-0">
-                          <Target className="w-3.5 h-3.5" />
-                        </div>
-                        <div>
-                          <div className="text-xs font-semibold text-white group-hover:text-amber-300">Lead Management</div>
-                          <div className="text-[10px] text-slate-400 leading-tight">CRM & pipelines</div>
-                        </div>
-                      </Link>
-
-                      <Link 
-                        href="/services/booking-systems"
-                        className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-white/5 transition-colors group"
-                      >
-                        <div className="p-1.5 rounded-lg bg-purple-500/10 text-purple-400 border border-purple-500/20 group-hover:bg-purple-500 group-hover:text-white transition-colors shrink-0">
-                          <Calendar className="w-3.5 h-3.5" />
-                        </div>
-                        <div>
-                          <div className="text-xs font-semibold text-white group-hover:text-purple-300">Booking Systems</div>
-                          <div className="text-[10px] text-slate-400 leading-tight">24/7 Scheduling</div>
-                        </div>
-                      </Link>
-
-                      <Link 
-                        href="/services/whatsapp-automation"
-                        className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-white/5 transition-colors group"
-                      >
-                        <div className="p-1.5 rounded-lg bg-teal-500/10 text-teal-400 border border-teal-500/20 group-hover:bg-teal-500 group-hover:text-white transition-colors shrink-0">
-                          <MessageSquare className="w-3.5 h-3.5" />
-                        </div>
-                        <div>
-                          <div className="text-xs font-semibold text-white group-hover:text-teal-300">WhatsApp Auto</div>
-                          <div className="text-[10px] text-slate-400 leading-tight">Chatbots & alerts</div>
-                        </div>
-                      </Link>
-
-                      <Link 
-                        href="/services/business-automation"
-                        className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-white/5 transition-colors group"
-                      >
-                        <div className="p-1.5 rounded-lg bg-pink-500/10 text-pink-400 border border-pink-500/20 group-hover:bg-pink-500 group-hover:text-white transition-colors shrink-0">
-                          <Zap className="w-3.5 h-3.5" />
-                        </div>
-                        <div>
-                          <div className="text-xs font-semibold text-white group-hover:text-pink-300">Process Automation</div>
-                          <div className="text-[10px] text-slate-400 leading-tight">Workflow autopilot</div>
-                        </div>
-                      </Link>
-
-                      <Link 
-                        href="/services/custom-business-software"
-                        className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-white/5 transition-colors group"
-                      >
-                        <div className="p-1.5 rounded-lg bg-blue-500/10 text-blue-400 border border-blue-500/20 group-hover:bg-blue-500 group-hover:text-white transition-colors shrink-0">
-                          <Cpu className="w-3.5 h-3.5" />
-                        </div>
-                        <div>
-                          <div className="text-xs font-semibold text-white group-hover:text-blue-300">Custom Software</div>
-                          <div className="text-[10px] text-slate-400 leading-tight">Internal web portals</div>
-                        </div>
-                      </Link>
+                      <div className="pt-2 border-t border-white/5">
+                        <Link href="/services" className="text-[11px] font-semibold text-indigo-400 hover:text-indigo-300 flex items-center justify-between px-2">
+                          <span>View All Services</span>
+                          <ArrowRight className="w-3 h-3" />
+                        </Link>
+                      </div>
                     </div>
 
-                    <div className="pt-2 mt-2 border-t border-white/5">
-                      <Link href="/services" className="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center justify-between px-3 py-1">
-                        <span>Explore All 8 Services</span>
-                        <ArrowRight className="w-3 h-3" />
-                      </Link>
+                    {/* Middle Column: Automate & Custom */}
+                    <div className="col-span-5 space-y-3 relative z-10 border-r border-white/5 pr-4">
+                      <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[10px] font-bold text-emerald-300 w-max tracking-wider uppercase">
+                        <span>Automate & Build</span>
+                      </div>
+                      
+                      <div className="grid grid-cols-1 gap-1">
+                        <Link 
+                          href="/services/lead-management"
+                          className="flex items-start gap-3 p-2 rounded-2xl hover:bg-white/5 transition-all group border border-transparent hover:border-white/5"
+                        >
+                          <div className="p-2 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20 group-hover:bg-amber-500 group-hover:text-white transition-all shrink-0">
+                            <Target className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <div className="text-xs font-bold text-white group-hover:text-amber-300">Lead Management & CRM</div>
+                            <div className="text-[10px] text-slate-400 leading-tight">No lost customer leads</div>
+                          </div>
+                        </Link>
+
+                        <Link 
+                          href="/services/booking-systems"
+                          className="flex items-start gap-3 p-2 rounded-2xl hover:bg-white/5 transition-all group border border-transparent hover:border-white/5"
+                        >
+                          <div className="p-2 rounded-xl bg-purple-500/10 text-purple-400 border border-purple-500/20 group-hover:bg-purple-500 group-hover:text-white transition-all shrink-0">
+                            <Calendar className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <div className="text-xs font-bold text-white group-hover:text-purple-300">Booking Systems</div>
+                            <div className="text-[10px] text-slate-400 leading-tight">24/7 Service scheduling</div>
+                          </div>
+                        </Link>
+
+                        <Link 
+                          href="/services/whatsapp-automation"
+                          className="flex items-start gap-3 p-2 rounded-2xl hover:bg-white/5 transition-all group border border-transparent hover:border-white/5"
+                        >
+                          <div className="p-2 rounded-xl bg-teal-500/10 text-teal-400 border border-teal-500/20 group-hover:bg-teal-500 group-hover:text-white transition-all shrink-0">
+                            <MessageSquare className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <div className="text-xs font-bold text-white group-hover:text-teal-300">WhatsApp Automation</div>
+                            <div className="text-[10px] text-slate-400 leading-tight">Instant replies & bots</div>
+                          </div>
+                        </Link>
+
+                        <Link 
+                          href="/services/business-automation"
+                          className="flex items-start gap-3 p-2 rounded-2xl hover:bg-white/5 transition-all group border border-transparent hover:border-white/5"
+                        >
+                          <div className="p-2 rounded-xl bg-pink-500/10 text-pink-400 border border-pink-500/20 group-hover:bg-pink-500 group-hover:text-white transition-all shrink-0">
+                            <Zap className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <div className="text-xs font-bold text-white group-hover:text-pink-300">Process Automation</div>
+                            <div className="text-[10px] text-slate-400 leading-tight">Eliminate manual admin work</div>
+                          </div>
+                        </Link>
+
+                        <Link 
+                          href="/services/custom-business-software"
+                          className="flex items-start gap-3 p-2 rounded-2xl hover:bg-white/5 transition-all group border border-transparent hover:border-white/5"
+                        >
+                          <div className="p-2 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20 group-hover:bg-blue-500 group-hover:text-white transition-all shrink-0">
+                            <Cpu className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <div className="text-xs font-bold text-white group-hover:text-blue-300">Custom Software</div>
+                            <div className="text-[10px] text-slate-400 leading-tight">Tailored portals & dashboards</div>
+                          </div>
+                        </Link>
+                      </div>
                     </div>
+
+                    {/* Right Column: Featured Solution Highlight */}
+                    <div className="col-span-3 relative z-10 flex flex-col justify-between p-4 rounded-2xl bg-gradient-to-b from-indigo-950/60 to-purple-950/40 border border-indigo-500/20">
+                      <div className="space-y-3">
+                        <div className="inline-flex items-center gap-1.5 text-[10px] font-bold text-cyan-300 uppercase tracking-wider bg-cyan-500/10 px-2 py-0.5 rounded-md border border-cyan-500/30">
+                          <Sparkles className="w-3 h-3 text-cyan-400" />
+                          <span>Custom Tech</span>
+                        </div>
+                        <h4 className="text-sm font-extrabold text-white leading-snug">
+                          Need a tailored business system?
+                        </h4>
+                        <p className="text-[11px] text-slate-300 leading-relaxed">
+                          We solve real business problems without bloated software packages or seat licenses.
+                        </p>
+                      </div>
+
+                      <button
+                        onClick={() => {
+                          setServicesDropdown(false);
+                          handleCtaClick('mega_menu_services');
+                        }}
+                        className="btn-primary text-xs py-2 px-3 w-full justify-center mt-4 cursor-pointer"
+                      >
+                        <span>Start Conversation</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </button>
+                    </div>
+
                   </div>
                 </div>
               )}
             </div>
 
-            {/* Industries Dropdown (Seamless Hover Bridge) */}
+            {/* Industries Mega Menu (Seamless Hover Bridge) */}
             <div 
               className="relative py-2"
               onMouseEnter={() => setIndustriesDropdown(true)}
               onMouseLeave={() => setIndustriesDropdown(false)}
             >
               <button 
-                className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-indigo-400 cursor-pointer ${
+                className={`flex items-center gap-1.5 text-sm font-medium transition-colors hover:text-indigo-400 cursor-pointer ${
                   pathname.startsWith('/industries') ? 'text-indigo-400 font-semibold' : 'text-slate-300'
                 }`}
               >
@@ -259,121 +305,167 @@ export function Header() {
               </button>
 
               {industriesDropdown && (
-                <div className="absolute top-full left-0 pt-2 w-[420px] z-50 animate-in fade-in slide-in-from-top-2 duration-150">
-                  <div className="rounded-2xl glass-card p-4 border border-white/10 shadow-2xl bg-[#0b0f17]/98 backdrop-blur-xl">
-                    <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider px-3 py-1 mb-2">Industry Solutions</div>
-                    <div className="grid grid-cols-2 gap-1">
-                      <Link 
-                        href="/industries/small-businesses"
-                        className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-white/5 transition-colors group"
-                      >
-                        <div className="p-1.5 rounded-lg bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 group-hover:bg-indigo-500 group-hover:text-white transition-colors shrink-0">
-                          <Store className="w-3.5 h-3.5" />
-                        </div>
-                        <div>
-                          <div className="text-xs font-semibold text-white group-hover:text-indigo-300">Small Businesses</div>
-                          <div className="text-[10px] text-slate-400 leading-tight">Broad digital presence</div>
-                        </div>
-                      </Link>
+                <div className="absolute top-full -left-64 pt-3 w-[780px] z-50 animate-in fade-in zoom-in-95 slide-in-from-top-3 duration-200">
+                  <div className="rounded-3xl glass-card p-6 border border-white/10 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] bg-[#070a11]/98 backdrop-blur-2xl grid grid-cols-12 gap-6 relative overflow-hidden">
+                    {/* Background glow accent inside mega menu */}
+                    <div className="absolute -top-10 -left-10 w-48 h-48 bg-cyan-600/10 blur-3xl rounded-full pointer-events-none" />
 
-                      <Link 
-                        href="/industries/coaching-centres"
-                        className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-white/5 transition-colors group"
-                      >
-                        <div className="p-1.5 rounded-lg bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 group-hover:bg-emerald-500 group-hover:text-white transition-colors shrink-0">
-                          <GraduationCap className="w-3.5 h-3.5" />
-                        </div>
-                        <div>
-                          <div className="text-xs font-semibold text-white group-hover:text-emerald-300">Coaching Centres</div>
-                          <div className="text-[10px] text-slate-400 leading-tight">Admissions & courses</div>
-                        </div>
-                      </Link>
+                    {/* Left Column: Local Services */}
+                    <div className="col-span-4 space-y-3 relative z-10 border-r border-white/5 pr-4">
+                      <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-[10px] font-bold text-cyan-300 w-max tracking-wider uppercase">
+                        <span>Local Services</span>
+                      </div>
+                      
+                      <div className="space-y-1">
+                        <Link 
+                          href="/industries/small-businesses"
+                          className="flex items-start gap-3 p-2.5 rounded-2xl hover:bg-white/5 transition-all group border border-transparent hover:border-white/5"
+                        >
+                          <div className="p-2 rounded-xl bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 group-hover:bg-indigo-500 group-hover:text-white transition-all shrink-0">
+                            <Store className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <div className="text-xs font-bold text-white group-hover:text-indigo-300">Small Businesses</div>
+                            <div className="text-[10px] text-slate-400 leading-tight">Broad digital presence</div>
+                          </div>
+                        </Link>
 
-                      <Link 
-                        href="/industries/salons"
-                        className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-white/5 transition-colors group"
-                      >
-                        <div className="p-1.5 rounded-lg bg-purple-500/10 text-purple-400 border border-purple-500/20 group-hover:bg-purple-500 group-hover:text-white transition-colors shrink-0">
-                          <Scissors className="w-3.5 h-3.5" />
-                        </div>
-                        <div>
-                          <div className="text-xs font-semibold text-white group-hover:text-purple-300">Salons & Spas</div>
-                          <div className="text-[10px] text-slate-400 leading-tight">Booking & menus</div>
-                        </div>
-                      </Link>
+                        <Link 
+                          href="/industries/salons"
+                          className="flex items-start gap-3 p-2.5 rounded-2xl hover:bg-white/5 transition-all group border border-transparent hover:border-white/5"
+                        >
+                          <div className="p-2 rounded-xl bg-purple-500/10 text-purple-400 border border-purple-500/20 group-hover:bg-purple-500 group-hover:text-white transition-all shrink-0">
+                            <Scissors className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <div className="text-xs font-bold text-white group-hover:text-purple-300">Salons & Spas</div>
+                            <div className="text-[10px] text-slate-400 leading-tight">Booking & service menus</div>
+                          </div>
+                        </Link>
 
-                      <Link 
-                        href="/industries/restaurants"
-                        className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-white/5 transition-colors group"
-                      >
-                        <div className="p-1.5 rounded-lg bg-amber-500/10 text-amber-400 border border-amber-500/20 group-hover:bg-amber-500 group-hover:text-white transition-colors shrink-0">
-                          <Utensils className="w-3.5 h-3.5" />
-                        </div>
-                        <div>
-                          <div className="text-xs font-semibold text-white group-hover:text-amber-300">Restaurants</div>
-                          <div className="text-[10px] text-slate-400 leading-tight">Digital menus & orders</div>
-                        </div>
-                      </Link>
+                        <Link 
+                          href="/industries/restaurants"
+                          className="flex items-start gap-3 p-2.5 rounded-2xl hover:bg-white/5 transition-all group border border-transparent hover:border-white/5"
+                        >
+                          <div className="p-2 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20 group-hover:bg-amber-500 group-hover:text-white transition-all shrink-0">
+                            <Utensils className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <div className="text-xs font-bold text-white group-hover:text-amber-300">Restaurants & Cafes</div>
+                            <div className="text-[10px] text-slate-400 leading-tight">Digital menus & ordering</div>
+                          </div>
+                        </Link>
 
-                      <Link 
-                        href="/industries/gyms"
-                        className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-white/5 transition-colors group"
-                      >
-                        <div className="p-1.5 rounded-lg bg-red-500/10 text-red-400 border border-red-500/20 group-hover:bg-red-500 group-hover:text-white transition-colors shrink-0">
-                          <Dumbbell className="w-3.5 h-3.5" />
-                        </div>
-                        <div>
-                          <div className="text-xs font-semibold text-white group-hover:text-red-300">Gyms & Fitness</div>
-                          <div className="text-[10px] text-slate-400 leading-tight">Trial passes & joins</div>
-                        </div>
-                      </Link>
+                        <Link 
+                          href="/industries/gyms"
+                          className="flex items-start gap-3 p-2.5 rounded-2xl hover:bg-white/5 transition-all group border border-transparent hover:border-white/5"
+                        >
+                          <div className="p-2 rounded-xl bg-red-500/10 text-red-400 border border-red-500/20 group-hover:bg-red-500 group-hover:text-white transition-all shrink-0">
+                            <Dumbbell className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <div className="text-xs font-bold text-white group-hover:text-red-300">Gyms & Fitness</div>
+                            <div className="text-[10px] text-slate-400 leading-tight">Trial passes & joins</div>
+                          </div>
+                        </Link>
+                      </div>
 
-                      <Link 
-                        href="/industries/consultants"
-                        className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-white/5 transition-colors group"
-                      >
-                        <div className="p-1.5 rounded-lg bg-blue-500/10 text-blue-400 border border-blue-500/20 group-hover:bg-blue-500 group-hover:text-white transition-colors shrink-0">
-                          <Briefcase className="w-3.5 h-3.5" />
-                        </div>
-                        <div>
-                          <div className="text-xs font-semibold text-white group-hover:text-blue-300">Consultants</div>
-                          <div className="text-[10px] text-slate-400 leading-tight">Authority & calls</div>
-                        </div>
-                      </Link>
-
-                      <Link 
-                        href="/industries/manufacturers"
-                        className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-white/5 transition-colors group"
-                      >
-                        <div className="p-1.5 rounded-lg bg-[#06b6d4]/10 text-cyan-400 border border-cyan-500/20 group-hover:bg-cyan-500 group-hover:text-white transition-colors shrink-0">
-                          <Factory className="w-3.5 h-3.5" />
-                        </div>
-                        <div>
-                          <div className="text-xs font-semibold text-white group-hover:text-cyan-300">Manufacturers</div>
-                          <div className="text-[10px] text-slate-400 leading-tight">B2B Catalogs & RFQs</div>
-                        </div>
-                      </Link>
-
-                      <Link 
-                        href="/industries/real-estate"
-                        className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-white/5 transition-colors group"
-                      >
-                        <div className="p-1.5 rounded-lg bg-orange-500/10 text-orange-400 border border-orange-500/20 group-hover:bg-orange-500 group-hover:text-white transition-colors shrink-0">
-                          <Building className="w-3.5 h-3.5" />
-                        </div>
-                        <div>
-                          <div className="text-xs font-semibold text-white group-hover:text-orange-300">Real Estate</div>
-                          <div className="text-[10px] text-slate-400 leading-tight">Listings & site visits</div>
-                        </div>
-                      </Link>
+                      <div className="pt-2 border-t border-white/5">
+                        <Link href="/industries" className="text-[11px] font-semibold text-cyan-400 hover:text-cyan-300 flex items-center justify-between px-2">
+                          <span>Explore All Industries</span>
+                          <ArrowRight className="w-3 h-3" />
+                        </Link>
+                      </div>
                     </div>
 
-                    <div className="pt-2 mt-2 border-t border-white/5">
-                      <Link href="/industries" className="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center justify-between px-3 py-1">
-                        <span>Explore Solutions for Your Industry</span>
-                        <ArrowRight className="w-3 h-3" />
-                      </Link>
+                    {/* Middle Column: B2B & Institutes */}
+                    <div className="col-span-5 space-y-3 relative z-10 border-r border-white/5 pr-4">
+                      <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-[10px] font-bold text-blue-300 w-max tracking-wider uppercase">
+                        <span>B2B & Professional</span>
+                      </div>
+                      
+                      <div className="space-y-1">
+                        <Link 
+                          href="/industries/coaching-centres"
+                          className="flex items-start gap-3 p-2.5 rounded-2xl hover:bg-white/5 transition-all group border border-transparent hover:border-white/5"
+                        >
+                          <div className="p-2 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 group-hover:bg-emerald-500 group-hover:text-white transition-all shrink-0">
+                            <GraduationCap className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <div className="text-xs font-bold text-white group-hover:text-emerald-300">Coaching Centres</div>
+                            <div className="text-[10px] text-slate-400 leading-tight">Admissions & course portals</div>
+                          </div>
+                        </Link>
+
+                        <Link 
+                          href="/industries/consultants"
+                          className="flex items-start gap-3 p-2.5 rounded-2xl hover:bg-white/5 transition-all group border border-transparent hover:border-white/5"
+                        >
+                          <div className="p-2 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20 group-hover:bg-blue-500 group-hover:text-white transition-all shrink-0">
+                            <Briefcase className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <div className="text-xs font-bold text-white group-hover:text-blue-300">Consultants & Advisors</div>
+                            <div className="text-[10px] text-slate-400 leading-tight">Authority & discovery calls</div>
+                          </div>
+                        </Link>
+
+                        <Link 
+                          href="/industries/manufacturers"
+                          className="flex items-start gap-3 p-2.5 rounded-2xl hover:bg-white/5 transition-all group border border-transparent hover:border-white/5"
+                        >
+                          <div className="p-2 rounded-xl bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 group-hover:bg-cyan-500 group-hover:text-white transition-all shrink-0">
+                            <Factory className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <div className="text-xs font-bold text-white group-hover:text-cyan-300">Manufacturers & B2B</div>
+                            <div className="text-[10px] text-slate-400 leading-tight">Industrial catalogs & RFQs</div>
+                          </div>
+                        </Link>
+
+                        <Link 
+                          href="/industries/real-estate"
+                          className="flex items-start gap-3 p-2.5 rounded-2xl hover:bg-white/5 transition-all group border border-transparent hover:border-white/5"
+                        >
+                          <div className="p-2 rounded-xl bg-orange-500/10 text-orange-400 border border-orange-500/20 group-hover:bg-orange-500 group-hover:text-white transition-all shrink-0">
+                            <Building className="w-4 h-4" />
+                          </div>
+                          <div>
+                            <div className="text-xs font-bold text-white group-hover:text-orange-300">Real Estate & Developers</div>
+                            <div className="text-[10px] text-slate-400 leading-tight">Listings & site visit scheduling</div>
+                          </div>
+                        </Link>
+                      </div>
                     </div>
+
+                    {/* Right Column: Featured Industry Callout */}
+                    <div className="col-span-3 relative z-10 flex flex-col justify-between p-4 rounded-2xl bg-gradient-to-b from-cyan-950/60 to-blue-950/40 border border-cyan-500/20">
+                      <div className="space-y-3">
+                        <div className="inline-flex items-center gap-1.5 text-[10px] font-bold text-emerald-300 uppercase tracking-wider bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-500/30">
+                          <Store className="w-3 h-3 text-emerald-400" />
+                          <span>Custom Niche</span>
+                        </div>
+                        <h4 className="text-sm font-extrabold text-white leading-snug">
+                          Don&apos;t see your exact industry?
+                        </h4>
+                        <p className="text-[11px] text-slate-300 leading-relaxed">
+                          We design custom digital workflows tailored to any business model or operational rules.
+                        </p>
+                      </div>
+
+                      <button
+                        onClick={() => {
+                          setIndustriesDropdown(false);
+                          handleCtaClick('mega_menu_industries');
+                        }}
+                        className="btn-primary text-xs py-2 px-3 w-full justify-center mt-4 cursor-pointer bg-cyan-600 hover:bg-cyan-500"
+                      >
+                        <span>Schedule Call</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </button>
+                    </div>
+
                   </div>
                 </div>
               )}
