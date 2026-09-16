@@ -96,7 +96,7 @@ export function Footer() {
           {/* Core Services */}
           <div className="space-y-3">
             <h3 className="text-xs font-semibold text-slate-300 uppercase tracking-wider">Services</h3>
-            <ul className="space-y-2 text-xs text-slate-400">
+            <ul className="space-y-1.5 text-xs text-slate-400">
               <li>
                 <Link href="/services/business-websites" className="hover:text-indigo-400 transition-colors">Business Websites</Link>
               </li>
@@ -104,15 +104,22 @@ export function Footer() {
                 <Link href="/services/website-redesign" className="hover:text-indigo-400 transition-colors">Website Redesign</Link>
               </li>
               <li>
+                <Link href="/services/ecommerce" className="hover:text-indigo-400 transition-colors">E-commerce Stores</Link>
+              </li>
+              <li>
+                <Link href="/services/lead-management" className="hover:text-indigo-400 transition-colors">Lead Management</Link>
+              </li>
+              <li>
+                <Link href="/services/booking-systems" className="hover:text-indigo-400 transition-colors">Booking Systems</Link>
+              </li>
+              <li>
+                <Link href="/services/whatsapp-automation" className="hover:text-indigo-400 transition-colors">WhatsApp Automation</Link>
+              </li>
+              <li>
                 <Link href="/services/business-automation" className="hover:text-indigo-400 transition-colors">Business Automation</Link>
               </li>
               <li>
                 <Link href="/services/custom-business-software" className="hover:text-indigo-400 transition-colors">Custom Software</Link>
-              </li>
-              <li>
-                <Link href="/services" className="hover:text-indigo-400 text-[11px] text-indigo-400 font-medium inline-flex items-center gap-1 pt-1">
-                  View All Services <ArrowUpRight className="w-3 h-3" />
-                </Link>
               </li>
             </ul>
           </div>
@@ -120,7 +127,7 @@ export function Footer() {
           {/* Industry Focus */}
           <div className="space-y-3">
             <h3 className="text-xs font-semibold text-slate-300 uppercase tracking-wider">Industries</h3>
-            <ul className="space-y-2 text-xs text-slate-400">
+            <ul className="space-y-1.5 text-xs text-slate-400">
               <li>
                 <Link href="/industries/small-businesses" className="hover:text-indigo-400 transition-colors">Small Businesses</Link>
               </li>
@@ -134,9 +141,16 @@ export function Footer() {
                 <Link href="/industries/restaurants" className="hover:text-indigo-400 transition-colors">Restaurants & Cafes</Link>
               </li>
               <li>
-                <Link href="/industries" className="hover:text-indigo-400 text-[11px] text-indigo-400 font-medium inline-flex items-center gap-1 pt-1">
-                  Explore Industries <ArrowUpRight className="w-3 h-3" />
-                </Link>
+                <Link href="/industries/gyms" className="hover:text-indigo-400 transition-colors">Gyms & Fitness</Link>
+              </li>
+              <li>
+                <Link href="/industries/consultants" className="hover:text-indigo-400 transition-colors">Consultants & Advisors</Link>
+              </li>
+              <li>
+                <Link href="/industries/manufacturers" className="hover:text-indigo-400 transition-colors">Manufacturers & B2B</Link>
+              </li>
+              <li>
+                <Link href="/industries/real-estate" className="hover:text-indigo-400 transition-colors">Real Estate & Developers</Link>
               </li>
             </ul>
           </div>
@@ -156,7 +170,7 @@ export function Footer() {
               </li>
               <li className="pt-2">
                 <a 
-                  href="https://wa.me/?text=Hello%20Sygmia%20Innovative,%20I'd%20like%20to%20discuss%20a%20digital%20solution." 
+                  href="https://wa.me/919113067486?text=Hello%20Sygmia%20Innovative,%20I'd%20like%20to%20discuss%20a%20digital%20solution." 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-xs text-emerald-400 hover:text-emerald-300 font-medium bg-emerald-500/10 px-2.5 py-1 rounded-lg border border-emerald-500/20"

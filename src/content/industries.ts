@@ -253,5 +253,217 @@ export const INDUSTRIES_DATA: Record<string, IndustryItem> = {
     featuredProjectSlug: 'artisan-bakes-digital',
     seoTitle: 'Restaurant Website Development & Digital Menu Systems | Sygmia',
     metaDescription: 'Digital menus, direct ordering systems, and table reservation web solutions for restaurants, cafes, and bakeries.'
+  },
+  'gyms': {
+    slug: 'gyms',
+    name: 'Gyms & Fitness Centers',
+    heroTagline: 'Digital Growth Solutions for Fitness Businesses',
+    heroHeadline: 'Turn local fitness searchers into active, paying gym members.',
+    heroSubtitle: 'Showcase your facilities, trainer profiles, trial class passes, and automate membership inquiries and trial bookings.',
+    ctaText: 'Talk About Your Fitness Center',
+    problemHeadline: 'Why fitness centers struggle to convert local interest into memberships',
+    problemStatement: 'People looking for a gym want to see real facility photos, class schedules, trainer qualifications, and membership plans before visiting in person.',
+    problems: [
+      'Potential members calling or DMing for basic membership pricing',
+      'High drop-off rate for free trial pass signups due to slow follow-up',
+      'No structured showcase of gym equipment, personal training, and group classes',
+      'Manual attendance and membership renewal tracking'
+    ],
+    bucketOverview: {
+      getOnline: [
+        'High-impact gym website & virtual tour',
+        'Trainer profiles & class schedules',
+        'Free trial pass landing page',
+        'Google Maps local SEO setup'
+      ],
+      improve: [
+        'Mobile speed & equipment gallery UX',
+        'Membership pricing table redesign',
+        'Local search ranking for fitness queries',
+        'High-converting trial CTA buttons'
+      ],
+      automate: [
+        'Instant WhatsApp trial pass delivery',
+        'Automated membership renewal alerts',
+        'Online personal training booking',
+        'Member lead pipeline manager'
+      ]
+    },
+    workflowHeadline: 'The gym member acquisition journey',
+    workflowSteps: [
+      { step: '01', stage: 'Local Search', description: 'Prospective member searches for top gyms or fitness classes nearby.' },
+      { step: '02', stage: 'Virtual Tour', description: 'Views high-res equipment photos, class schedules, and membership benefits.' },
+      { step: '03', stage: 'Trial Pass Request', description: 'Fills out a quick form to claim a 1-Day Free Trial Pass.' },
+      { step: '04', stage: 'Auto Pass Delivery', description: 'Receives digital pass instantly on WhatsApp; front desk is notified.' },
+      { step: '05', stage: 'Gym Visit & Join', description: 'Visits gym, completes trial session, and converts to monthly membership.' }
+    ],
+    solutionHeadline: 'A modern digital brand that builds instant trust with fitness enthusiasts',
+    solutionCopy: 'We build high-energy websites and trial pass engines that attract fitness-conscious people in your area and convert them into long-term members.',
+    faqs: [
+      { question: 'Can prospective members claim a free trial pass on WhatsApp?', answer: 'Yes! We create direct WhatsApp triggers that issue a digital trial pass voucher immediately when requested.' },
+      { question: 'Can we list group class schedules that update easily?', answer: 'Yes, we build clean class schedule tables that can be updated in seconds.' }
+    ],
+    relatedServiceSlugs: ['business-websites', 'booking-systems', 'whatsapp-automation'],
+    seoTitle: 'Gym Website Development & Member Acquisition Systems | Sygmia Innovative',
+    metaDescription: 'High-converting websites, free trial pass engines, and automated membership inquiry workflows for gyms, fitness centers, and trainers.'
+  },
+  'consultants': {
+    slug: 'consultants',
+    name: 'Consultants & Professional Services',
+    heroTagline: 'Authority Digital Systems for Professional Services',
+    heroHeadline: 'Position your expertise, showcase case studies, and book high-value client consultations.',
+    heroSubtitle: 'Build a high-trust digital presence that demonstrates your track record, pre-qualifies prospective clients, and fills your calendar with paid or discovery calls.',
+    ctaText: 'Talk About Your Advisory Practice',
+    problemHeadline: 'Why standard portfolio websites fail for consultants and advisors',
+    problemStatement: 'Clients hiring high-value consultants need deep trust, proven client outcomes, and a clear methodology before committing to an initial consultation.',
+    problems: [
+      'Generic websites that sound like everyone else and fail to communicate unique value',
+      'Wasting time on consultation calls with unqualified, budget-mismatched prospects',
+      'Client case studies hidden in old slide decks instead of accessible web pages',
+      'Back-and-forth email tagging just to find an agreeable meeting time'
+    ],
+    bucketOverview: {
+      getOnline: [
+        'Authority brand website & bio page',
+        'Service framework & methodology overview',
+        'Client case study directory',
+        'Direct discovery call booking link'
+      ],
+      improve: [
+        'Clean typography & executive UI design',
+        'Client testimonial & proof showcase',
+        'SEO for niche advisory searches',
+        'High-ticket conversion positioning'
+      ],
+      automate: [
+        'Pre-consultation qualification questionnaire',
+        'Automated calendar scheduling & zoom link',
+        'WhatsApp meeting reminders',
+        'Client intake document dispatch'
+      ]
+    },
+    workflowHeadline: 'The high-ticket client acquisition workflow',
+    workflowSteps: [
+      { step: '01', stage: 'Discovery', description: 'Prospective client reads your article, referral link, or social post.' },
+      { step: '02', stage: 'Authority Review', description: 'Explores your site, reviews detailed client case studies and advisory approach.' },
+      { step: '03', stage: 'Pre-Qualification', description: 'Fills out a brief intake form answering budget and business goal questions.' },
+      { step: '04', stage: 'Call Booking', description: 'Selects a convenient time on your automated calendar and receives calendar invite.' },
+      { step: '05', stage: 'Consultation', description: 'Conducts strategic meeting with an informed, pre-qualified prospect.' }
+    ],
+    solutionHeadline: 'Build an unbeatable reputation as the go-to expert in your niche',
+    solutionCopy: 'We build sophisticated, authority-building web presences for consultants, financial advisors, tax experts, and executive coaches that filter out tire-kickers and attract ideal clients.',
+    faqs: [
+      { question: 'Can we screen clients before they book a call?', answer: 'Yes! We embed pre-qualification questions so only qualified prospects can access your consultation calendar.' },
+      { question: 'Can this integrate with Google Calendar or Outlook?', answer: 'Yes, booking calendars sync bi-directionally with Google Calendar, Outlook, and Zoom.' }
+    ],
+    relatedServiceSlugs: ['business-websites', 'booking-systems', 'lead-management'],
+    seoTitle: 'Consultant Website Development & Client Acquisition Systems | Sygmia Innovative',
+    metaDescription: 'Authority websites, pre-qualification intake forms, and automated consultation booking systems for consultants and professional advisors.'
+  },
+  'manufacturers': {
+    slug: 'manufacturers',
+    name: 'Manufacturers & Industrial Units',
+    heroTagline: 'Digital Product Catalogs & RFQ Systems for Industry',
+    heroHeadline: 'Showcase your industrial capabilities and capture qualified B2B RFQs.',
+    heroSubtitle: 'Replace static PDF product sheets with an interactive B2B catalog, technical specification tables, and automated Request for Quote (RFQ) lead routing.',
+    ctaText: 'Talk About Your Manufacturing Unit',
+    problemHeadline: 'The digital friction holding B2B manufacturers back',
+    problemStatement: 'B2B buyers and procurement officers demand detailed technical specifications, certifications, and fast RFQ responses. Dated websites lose large commercial deals to modern competitors.',
+    problems: [
+      'Heavy technical catalogs trapped in outdated 50MB downloadable PDFs',
+      'B2B buyers unable to easily filter products by material, size, or spec',
+      'RFQ requests arriving as vague emails missing essential specification details',
+      'No central portal to display plant capacity, machinery, and ISO certifications'
+    ],
+    bucketOverview: {
+      getOnline: [
+        'Industrial web portal & plant showcase',
+        'Filterable B2B product catalog',
+        'ISO certification & compliance section',
+        'Direct RFQ inquiry form'
+      ],
+      improve: [
+        'Technical specification table UI',
+        'Fast search by product SKU / Spec',
+        'Mobile responsiveness for field buyers',
+        'Industrial SEO ranking for product terms'
+      ],
+      automate: [
+        'Structured RFQ form with file upload',
+        'Instant RFQ notification to sales engineers',
+        'Automated spec sheet PDF dispatch on WhatsApp',
+        'B2B buyer lead pipeline dashboard'
+      ]
+    },
+    workflowHeadline: 'The B2B industrial procurement journey',
+    workflowSteps: [
+      { step: '01', stage: 'Requirement Search', description: 'Procurement manager searches for custom component or industrial product.' },
+      { step: '02', stage: 'Spec Verification', description: 'Examines product specifications, CAD drawings, and ISO certifications on your portal.' },
+      { step: '03', stage: 'RFQ Submission', description: 'Submits structured RFQ specifying quantity, material grade, and delivery timeline.' },
+      { step: '04', stage: 'Automated Alert', description: 'Your sales engineering team receives complete specification payload immediately.' },
+      { step: '05', stage: 'Quote & Contract', description: 'Sales team responds with accurate commercial proposal within hours.' }
+    ],
+    solutionHeadline: 'Transform your manufacturing business into a modern B2B powerhouse',
+    solutionCopy: 'We build robust, professional industrial web portals that organize complex product catalogs, communicate manufacturing capability, and streamline the B2B quoting process.',
+    faqs: [
+      { question: 'Can buyers attach engineering drawings or CAD files to RFQ forms?', answer: 'Yes, RFQ forms include secure file upload fields for PDF, DWG, and STEP files.' },
+      { question: 'Can we manage hundreds of industrial products easily?', answer: 'Absolutey! We structure product catalogs so adding or updating technical specs is straightforward.' }
+    ],
+    relatedServiceSlugs: ['business-websites', 'ecommerce', 'lead-management', 'custom-business-software'],
+    seoTitle: 'Manufacturer Website Development & Industrial RFQ Portals | Sygmia Innovative',
+    metaDescription: 'B2B web portals, interactive product catalogs, and automated Request for Quote (RFQ) systems for manufacturers and industrial suppliers.'
+  },
+  'real-estate': {
+    slug: 'real-estate',
+    name: 'Real Estate & Developers',
+    heroTagline: 'Lead Generation & Property Showcase Systems',
+    heroHeadline: 'Showcase property listings and generate high-intent buyer & tenant leads.',
+    heroSubtitle: 'Present residential & commercial properties with rich galleries, floor plans, neighborhood guides, and direct site-visit scheduling.',
+    ctaText: 'Talk About Your Property Business',
+    problemHeadline: 'Why real estate agencies miss out on serious property buyers',
+    problemStatement: 'Property buyers browse late at night and want instant floor plans, price breakdowns, and location details. Slow responses lead buyers directly to alternative listings.',
+    problems: [
+      'Property photos posted on social media without structured price and amenity details',
+      'High volume of casual inquiries taking up agent time on non-serious buyers',
+      'No central web listing for active residential and commercial inventory',
+      'Manual follow-ups for site visit scheduling and brochure sharing'
+    ],
+    bucketOverview: {
+      getOnline: [
+        'Property agency website & project listings',
+        'High-res image & floor plan showcase',
+        'Amenities & location map integration',
+        'Direct agent WhatsApp shortcut'
+      ],
+      improve: [
+        'Property filter UX (Price, Location, BHK)',
+        'Mobile property brochure viewing',
+        'Local real estate SEO optimization',
+        'High-converting site-visit CTA buttons'
+      ],
+      automate: [
+        'Instant WhatsApp brochure & layout PDF bot',
+        'Automated site visit scheduling flow',
+        'Property buyer inquiry CRM dashboard',
+        'New listing alert broadcast system'
+      ]
+    },
+    workflowHeadline: 'The property buyer conversion journey',
+    workflowSteps: [
+      { step: '01', stage: 'Property Search', description: 'Buyer searches for apartments, villas, or commercial space in your city.' },
+      { step: '02', stage: 'Listing Review', description: 'Explores property photos, floor plan layouts, pricing, and project amenities.' },
+      { step: '03', stage: 'Brochure Request', description: 'Requests detailed project brochure or schedules a guided site visit.' },
+      { step: '04', stage: 'Instant WhatsApp Dispatch', description: 'Receives complete project PDF & location pin on WhatsApp immediately.' },
+      { step: '05', stage: 'Site Visit & Closing', description: 'Attends scheduled site visit with assigned sales agent and closes deal.' }
+    ],
+    solutionHeadline: 'Turn property views into confirmed site visits and closed deals',
+    solutionCopy: 'We build sleek, modern real estate portals and project landing pages that showcase properties in their best light and automate site visit bookings.',
+    faqs: [
+      { question: 'Can buyers receive property brochures automatically on WhatsApp?', answer: 'Yes! When a buyer requests details, our automated system instantly dispatches the project PDF brochure on WhatsApp.' },
+      { question: 'Can we feature multiple agents and property types?', answer: 'Yes, you can organize listings by property type (Residential, Commercial, Land) and assign dedicated agents.' }
+    ],
+    relatedServiceSlugs: ['business-websites', 'lead-management', 'whatsapp-automation', 'booking-systems'],
+    seoTitle: 'Real Estate Website Development & Property Lead Generation | Sygmia Innovative',
+    metaDescription: 'Property showcase portals, interactive project landing pages, site visit scheduling, and WhatsApp lead automation for real estate.'
   }
 };

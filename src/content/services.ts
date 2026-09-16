@@ -218,5 +218,185 @@ export const SERVICES_DATA: Record<string, ServiceItem> = {
     relatedIndustrySlugs: ['small-businesses', 'coaching-centres', 'salons', 'restaurants'],
     seoTitle: 'Custom Business Software & Internal Tools Development | Sygmia',
     metaDescription: 'Build custom internal web applications, customer portals, and business management tools tailored to your business operations.'
+  },
+  'ecommerce': {
+    slug: 'ecommerce',
+    name: 'E-commerce & Online Stores',
+    bucket: 'GET ONLINE',
+    tagline: 'Sell Your Products Online Direct',
+    heroHeadline: 'High-converting e-commerce stores built to sell without hefty platform commissions.',
+    heroSubtitle: 'Launch a fast, beautiful online store with instant payment gateway integration, product catalogs, order tracking, and mobile-first checkout.',
+    problemHeadline: 'Why traditional e-commerce platforms hurt small brand margins',
+    problemStatement: 'SaaS e-commerce platforms charge recurring monthly fees, transaction cuts, and plug-in fees, while marketplace apps hijack your customer data and charge 25-30% commissions.',
+    problems: [
+      'High marketplace commissions eating into profit margins',
+      'Slow mobile checkout causing high shopping cart abandonment',
+      'Complex inventory and payment gateway setups',
+      'No direct ownership over customer email and phone contacts'
+    ],
+    solutionHeadline: 'Direct-to-consumer online store built for maximum conversion',
+    solutionOverview: 'Sygmia designs custom, fast-loading e-commerce stores with zero monthly transaction cuts. Complete control over your catalog, payment gateways, and WhatsApp order alerts.',
+    capabilities: [
+      'Custom Product Catalog & Inventory Display',
+      'Razorpay / Stripe / UPI Payment Gateway Setup',
+      'Mobile-Optimized Fast One-Page Checkout',
+      'WhatsApp Order Confirmation & Tracking',
+      'Discount Coupon & Promotional Code System',
+      'Customer Order Management Dashboard'
+    ],
+    deliverables: [
+      { businessNeed: 'Direct Product Sales', sygmiaSolution: 'Commission-free custom e-commerce store' },
+      { businessNeed: 'Mobile Shopping', sygmiaSolution: 'Lightning-fast mobile-first checkout experience' },
+      { businessNeed: 'Instant Payments', sygmiaSolution: 'Integrated UPI, Credit Card, and Netbanking' },
+      { businessNeed: 'Order Tracking', sygmiaSolution: 'Automated WhatsApp & Email order receipts' }
+    ],
+    processSteps: [
+      { step: '01', title: 'Product & Pricing Architecture', description: 'We structure your product categories, SKU lists, and payment rules.' },
+      { step: '02', title: 'Store UI & Checkout Design', description: 'We design a frictionless shopping experience focused on quick conversion.' },
+      { step: '03', title: 'Gateway & WhatsApp Integration', description: 'We connect secure payment providers and automated order alerts.' },
+      { step: '04', title: 'Store Launch & Training', description: 'We test live transactions and onboard your team to manage orders.' }
+    ],
+    faqs: [
+      { question: 'Do I pay any sales commissions on my orders?', answer: 'Zero sales commissions! You only pay standard payment gateway processing fees (e.g. Razorpay / UPI).' },
+      { question: 'Can customers pay using GPay, PhonePe, and Paytm UPI?', answer: 'Yes, we integrate direct UPI payment flows so customers can pay instantly on mobile.' }
+    ],
+    relatedIndustrySlugs: ['small-businesses', 'manufacturers', 'salons', 'restaurants'],
+    seoTitle: 'E-commerce Website Development & Online Stores | Sygmia Innovative',
+    metaDescription: 'Build a fast, commission-free e-commerce website with instant UPI payments, mobile checkout, and WhatsApp order alerts.'
+  },
+  'lead-management': {
+    slug: 'lead-management',
+    name: 'Lead Management & CRM',
+    bucket: 'AUTOMATE YOUR WORK',
+    tagline: 'Capture, Organize & Convert Every Enquiry',
+    heroHeadline: 'Never lose a customer lead to scattered messages or slow follow-ups.',
+    heroSubtitle: 'Centralize customer enquiries from your website, WhatsApp, phone calls, and ads into a clean, simple sales pipeline dashboard.',
+    problemHeadline: 'Are customer enquiries slipping through the cracks?',
+    problemStatement: 'When leads arrive across WhatsApp, Instagram DMs, email forms, and phone calls, sales opportunities get forgotten, resulting in lost revenue.',
+    problems: [
+      'Leads stored in personal phone contacts and notebooks',
+      'No visibility into which team member followed up with which prospect',
+      'Slow response times leading prospects to buy from competitors',
+      'Lack of sales conversion tracking and monthly lead reports'
+    ],
+    solutionHeadline: 'A simple, unified lead pipeline built around your sales workflow',
+    solutionOverview: 'Sygmia builds lightweight lead management dashboards that automatically capture every incoming enquiry, assign lead stages, trigger follow-up alerts, and notify your sales team in real time.',
+    capabilities: [
+      'Automated Central Lead Capture Pipeline',
+      'Real-Time WhatsApp & Email Lead Alerts',
+      'Lead Status & Stage Tracking (New, Contacted, Proposal, Won)',
+      'Sales Rep Assignment & Activity Logs',
+      'Automated Follow-Up Reminder Triggers',
+      'Conversion Rate Analytics & Source Tracking'
+    ],
+    deliverables: [
+      { businessNeed: 'No Missed Leads', sygmiaSolution: 'Instant central capture from all forms & ads' },
+      { businessNeed: 'Faster Response Time', sygmiaSolution: 'Real-time team push & WhatsApp alerts' },
+      { businessNeed: 'Organized Pipeline', sygmiaSolution: 'Visual drag-and-drop lead status dashboard' },
+      { businessNeed: 'Sales Accountability', sygmiaSolution: 'Team assignment and call follow-up tracking' }
+    ],
+    processSteps: [
+      { step: '01', title: 'Lead Channel Mapping', description: 'We audit all channels where prospects contact your business.' },
+      { step: '02', title: 'Pipeline Customization', description: 'We define custom sales stages and qualification parameters.' },
+      { step: '03', title: 'Capture & Alert Integration', description: 'We connect lead forms, WhatsApp, and instant team notifications.' },
+      { step: '04', title: 'Team Onboarding', description: 'We train your team to update lead statuses effortlessly.' }
+    ],
+    faqs: [
+      { question: 'Can leads from Facebook & Google ads flow into this system?', answer: 'Yes! We can connect your ad campaigns so lead form submissions appear instantly in your dashboard.' },
+      { question: 'Is it hard for non-technical sales staff to use?', answer: 'No. We design simple, distraction-free interfaces that require zero technical training.' }
+    ],
+    relatedIndustrySlugs: ['real-estate', 'consultants', 'coaching-centres', 'small-businesses'],
+    seoTitle: 'Lead Management Systems & CRM for Small Businesses | Sygmia Innovative',
+    metaDescription: 'Capture, track, and convert sales leads automatically with centralized lead management dashboards and instant WhatsApp alerts.'
+  },
+  'booking-systems': {
+    slug: 'booking-systems',
+    name: 'Booking Systems & Scheduling',
+    bucket: 'AUTOMATE YOUR WORK',
+    tagline: 'Automate 24/7 Service Scheduling',
+    heroHeadline: 'Let customers book appointments 24/7 without phone calls or manual scheduling.',
+    heroSubtitle: 'Eliminate double bookings, reduce no-shows with automated WhatsApp reminders, and accept appointment deposits online.',
+    problemHeadline: 'The operational headache of manual booking management',
+    problemStatement: 'Answering constant phone calls to check availability, handling client rescheduling, and suffering from client no-shows consumes hours of productive work every day.',
+    problems: [
+      'Staff spending hours on phone calls confirming dates and times',
+      'High client no-show rate due to forgotten appointments',
+      'Double bookings and calendar confusion during peak hours',
+      'Inability for night-owl customers to book after business hours'
+    ],
+    solutionHeadline: 'Self-service online booking calendar with automated reminders',
+    solutionOverview: 'Sygmia integrates smart booking engines that display real-time calendar availability, handle service selection, process booking deposits, and send automated WhatsApp reminders.',
+    capabilities: [
+      'Interactive Service & Time-Slot Booking Calendar',
+      'Staff & Resource Availability Management',
+      'Automated WhatsApp & SMS Appointment Reminders',
+      'Online Deposit & Full Pre-payment Gateway',
+      'Client Rescheduling & Cancellation Rules',
+      'Google Calendar & Mobile Calendar Syncing'
+    ],
+    deliverables: [
+      { businessNeed: '24/7 Booking Availability', sygmiaSolution: 'Self-service online scheduling widget' },
+      { businessNeed: 'Eliminate No-Shows', sygmiaSolution: 'Automated WhatsApp reminder 2 hours prior' },
+      { businessNeed: 'Reduce Phone Time', sygmiaSolution: 'Automated slot selection and booking confirmation' },
+      { businessNeed: 'Guaranteed Revenue', sygmiaSolution: 'Optional advance booking deposit integration' }
+    ],
+    processSteps: [
+      { step: '01', title: 'Service & Schedule Audit', description: 'We map out your operating hours, service durations, and staff rosters.' },
+      { step: '02', title: 'Booking Workflow Setup', description: 'We configure booking rules, buffer times between slots, and deposit rules.' },
+      { step: '03', title: 'Notification Integration', description: 'We connect WhatsApp and Email reminder triggers for clients and staff.' },
+      { step: '04', title: 'Live Testing & Go-Live', description: 'We test booking flows across desktop and mobile before launching.' }
+    ],
+    faqs: [
+      { question: 'Can clients reschedule their appointments online?', answer: 'Yes, clients can easily reschedule or cancel within the time limits you set.' },
+      { question: 'Can we assign different staff members to bookings?', answer: 'Yes, clients can select specific staff members or let the system assign available slots.' }
+    ],
+    relatedIndustrySlugs: ['salons', 'gyms', 'consultants', 'coaching-centres'],
+    seoTitle: 'Online Appointment & Booking System Development | Sygmia Innovative',
+    metaDescription: 'Automate customer service appointments, calendar availability, advance deposits, and WhatsApp reminders with custom booking systems.'
+  },
+  'whatsapp-automation': {
+    slug: 'whatsapp-automation',
+    name: 'WhatsApp Automation',
+    bucket: 'AUTOMATE YOUR WORK',
+    tagline: 'Instant Customer Engagement via WhatsApp',
+    heroHeadline: 'Turn WhatsApp into an automated sales and customer service channel.',
+    heroSubtitle: 'Send instant auto-replies, share product brochures, send payment links, and trigger automated follow-ups directly on WhatsApp.',
+    problemHeadline: 'Why manual WhatsApp messaging limits your business growth',
+    problemStatement: 'Customers expect immediate replies on WhatsApp. When your staff is busy or offline, interested prospects leave for competitors who answer faster.',
+    problems: [
+      'Delayed responses to customer inquiries outside business hours',
+      'Manually copy-pasting the same pricing and PDF brochures repeatedly',
+      'No organized record of customer chat history across staff phones',
+      'Inability to broadcast updates or offers to opt-in customer lists'
+    ],
+    solutionHeadline: 'Automated WhatsApp chatbots, catalog sharing, and notification triggers',
+    solutionOverview: 'Sygmia sets up official WhatsApp Business API flows that instantly greet new leads, answer FAQs, share digital catalogs, and notify your sales team when human intervention is needed.',
+    capabilities: [
+      'Instant WhatsApp Auto-Responder & Greeting Flow',
+      'Interactive Menu Bot (Catalog, Pricing, Location, FAQs)',
+      'Automated Document & PDF Syllabus Sharing',
+      'Pre-Filled Click-to-WhatsApp Website Buttons',
+      'Multi-Agent Customer Support Inbox Setup',
+      'Broadcast Notification & Lead Nurturing Campaigns'
+    ],
+    deliverables: [
+      { businessNeed: '24/7 Instant Response', sygmiaSolution: 'Automated WhatsApp welcome & FAQ responder' },
+      { businessNeed: 'Product / Service Info', sygmiaSolution: 'Instant PDF brochure & catalog sharing bot' },
+      { businessNeed: 'Lead Handoff', sygmiaSolution: 'Smart routing to active human support agents' },
+      { businessNeed: 'Repeat Engagement', sygmiaSolution: 'Opt-in notification broadcasts & offer alerts' }
+    ],
+    processSteps: [
+      { step: '01', title: 'Conversation Flow Mapping', description: 'We map out common customer questions and optimal automated answer paths.' },
+      { step: '02', title: 'API & Bot Configuration', description: 'We build the interactive menu options, media sharing, and triggers.' },
+      { step: '03', title: 'Website & Form Integration', description: 'We link website lead forms to trigger instant WhatsApp messages.' },
+      { step: '04', title: 'Agent Training & Launch', description: 'We set up your multi-user inbox and guide your team on managing chats.' }
+    ],
+    faqs: [
+      { question: 'Is this safe and compliant with WhatsApp policies?', answer: 'Yes, we implement official WhatsApp Business solutions in full compliance with Meta policies.' },
+      { question: 'Can a human agent take over the chat at any time?', answer: 'Absolutey! When a customer needs personalized help, the bot smoothly transfers the chat to a live staff member.' }
+    ],
+    relatedIndustrySlugs: ['coaching-centres', 'salons', 'real-estate', 'gyms', 'restaurants'],
+    seoTitle: 'WhatsApp Business Automation & Chatbot Development | Sygmia Innovative',
+    metaDescription: 'Automate WhatsApp customer service, instant brochure sharing, booking confirmations, and lead follow-ups for your business.'
   }
 };
