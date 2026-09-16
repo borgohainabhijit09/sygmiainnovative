@@ -21,6 +21,7 @@ import { WORK_DATA } from '@/content/work';
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 import { JsonLd, generateServiceSchema, generateFaqSchema } from '@/components/seo/JsonLd';
 import { StartConversationButton } from '@/components/buttons/StartConversationButton';
+import { ProjectProof } from '@/components/proof/ProjectProof';
 
 export async function generateStaticParams() {
   return Object.keys(SERVICES_DATA).map((slug) => ({ slug }));
@@ -54,14 +55,24 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     .map(s => INDUSTRIES_DATA[s])
     .filter(Boolean);
 
-  const whatsappUrl = `https://wa.me/919113067486?text=Hello%20Sygmia%20Innovative,%20I'd%20like%20to%20discuss%20${encodeURIComponent(service.name)}`;
+  // Find a matching project proof
+  const projectProofItem = Object.values(WORK_DATA).find(w => 
+    w.serviceCategory.toLowerCase().includes(service.name.toLowerCase()) ||
+    w.capabilities.some(c => c.toLowerCase().includes(service.slug.replace(/-/g, ' ')))
+  ) || Object.values(WORK_DATA)[0];
+
+  const whatsappUrl = `https://wa.me/919113067486?text=Hello%20Sygmia%20Innovative,%20I'd%20like%20to%20get%20a%20quote%20for%20${encodeURIComponent(service.name)}`;
+
+  const primaryCtaLabel = slug === 'business-websites' 
+    ? 'Get Your Website Quote' 
+    : 'Get a Free Consultation';
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20 pb-24">
       
       {/* Structured Data */}
       <JsonLd schema={[
-        generateServiceSchema(service.name, service.metaDescription, `https://sygmia.com/services/${service.slug}`),
+        generateServiceSchema(service.name, service.metaDescription, `https://sygmiainnovative.co.in/services/${service.slug}`),
         generateFaqSchema(service.faqs)
       ]} />
 
@@ -93,7 +104,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </p>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
-              <StartConversationButton requirement={service.slug} />
+              <StartConversationButton requirement={service.slug} label={primaryCtaLabel} />
               <Link href="#deliverables" className="btn-secondary text-base px-8 py-3.5 text-center">
                 <span>See Deliverables</span>
               </Link>
@@ -203,6 +214,28 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </div>
       </section>
 
+      {/* PROOF OF WORK SECTION */}
+      {projectProofItem && (
+        <section className="space-y-6">
+          <div className="space-y-2">
+            <span className="badge-indigo">Proof of Work</span>
+            <h2 className="text-3xl font-bold text-white tracking-tight">See what this can look like</h2>
+            <p className="text-xs text-slate-400">Genuine project architecture built by Sygmia.</p>
+          </div>
+          <ProjectProof
+            projectName={projectProofItem.title}
+            projectType={projectProofItem.serviceCategory}
+            industry={projectProofItem.industryName}
+            screenshot={projectProofItem.imageUrl}
+            description={projectProofItem.summary}
+            liveUrl={projectProofItem.websiteUrl}
+            caseStudyUrl={`/work/${projectProofItem.slug}`}
+            isDemo={projectProofItem.isDemo}
+            outcomes={projectProofItem.outcomes}
+          />
+        </section>
+      )}
+
       {/* 4. DELIVERABLES MATRIX */}
       <section id="deliverables" className="glass-card p-8 sm:p-12 border border-white/10 space-y-8">
         <div className="space-y-2">
@@ -234,13 +267,20 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </div>
       </section>
 
-      {/* 5. PRICING PHILOSOPHY */}
-      <section className="glass-card p-8 text-center space-y-4 border border-indigo-500/30">
-        <h3 className="text-xl font-bold text-white">Pricing & Scope Philosophy</h3>
+      {/* 5. PRICING TRANSPARENCY & PHILOSOPHY */}
+      <section className="glass-card p-8 sm:p-10 text-center space-y-4 border border-indigo-500/30 bg-gradient-to-tr from-indigo-950/20 via-[#0b0f17] to-[#0b0f17]">
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold border border-emerald-500/20 mx-auto">
+          <span>Transparent Pricing Guidance</span>
+        </div>
+        <h3 className="text-2xl font-extrabold text-white">
+          {service.pricingGuidance ? service.pricingGuidance.split('.')[0] + '.' : 'Reasonable & Transparent Pricing'}
+        </h3>
         <p className="text-sm text-slate-300 max-w-2xl mx-auto leading-relaxed">
-          Every business is different. We scope projects based on what you actually need rather than forcing every business into the same rigid tier package.
+          {service.pricingGuidance || 'Every business is different. We scope projects based on what you actually need rather than forcing every business into the same rigid tier package.'}
         </p>
-        <StartConversationButton requirement={service.slug} label="Get a Tailored Proposal" variant="secondary" />
+        <div className="pt-2">
+          <StartConversationButton requirement={service.slug} label="Get Your Custom Quote" variant="secondary" />
+        </div>
       </section>
 
       {/* 6. PROCESS STEPS */}
@@ -308,15 +348,15 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <section className="glass-card p-10 sm:p-14 text-center space-y-6 border border-indigo-500/30">
         <h2 className="text-3xl font-bold text-white">Ready to improve your digital side?</h2>
         <p className="text-sm text-slate-300 max-w-xl mx-auto">
-          Tell us what you&apos;re trying to achieve. We will help you figure out what you need.
+          Tell us what you&apos;re trying to improve. We will help you figure out what you need.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <StartConversationButton requirement={service.slug} />
+          <StartConversationButton requirement={service.slug} label={primaryCtaLabel} />
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-secondary text-sm px-8 py-3 text-emerald-400 border-emerald-500/30 hover:bg-emerald-500/10"
+            className="btn-secondary text-sm px-8 py-3 text-emerald-400 border-emerald-500/30 hover:bg-emerald-500/10 flex items-center gap-2"
           >
             <MessageSquare className="w-4 h-4" /> WhatsApp Us
           </a>
@@ -326,3 +366,4 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     </div>
   );
 }
+

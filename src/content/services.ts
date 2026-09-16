@@ -21,6 +21,7 @@ export interface ServiceItem {
   tagline: string;
   heroHeadline: string;
   heroSubtitle: string;
+  pricingGuidance?: string;
   problemHeadline: string;
   problemStatement: string;
   problems: string[];
@@ -43,6 +44,7 @@ export const SERVICES_DATA: Record<string, ServiceItem> = {
     tagline: 'Build Your Digital Presence',
     heroHeadline: 'A professional website built around your business — not a generic template.',
     heroSubtitle: 'Fast, responsive, and conversion-focused business websites designed to help customers discover, trust, and connect with your business.',
+    pricingGuidance: 'Business website projects typically start from ₹15,000 (typical range: ₹15K–₹50K). Final pricing depends on the number of pages, content requirements, integrations and functionality.',
     problemHeadline: 'Why most small business websites fail to produce results',
     problemStatement: 'Many business websites end up as slow, outdated digital business cards that confuse visitors, fail to explain services clearly, and yield zero customer enquiries.',
     problems: [
@@ -78,7 +80,8 @@ export const SERVICES_DATA: Record<string, ServiceItem> = {
     faqs: [
       { question: 'How long does a business website take to build?', answer: 'Typically 2 to 3 weeks from initial strategy session to live launch.' },
       { question: 'Will my website work well on mobile phones?', answer: 'Yes. Every Sygmia website is engineered mobile-first with touch-friendly navigation.' },
-      { question: 'Can customers message me directly on WhatsApp?', answer: 'Yes, we integrate direct WhatsApp action buttons pre-filled with context about what service the customer is viewing.' }
+      { question: 'Can customers message me directly on WhatsApp?', answer: 'Yes, we integrate direct WhatsApp action buttons pre-filled with context about what service the customer is viewing.' },
+      { question: 'What is the typical investment for a business website?', answer: 'Typical business website projects range from ₹15,000 to ₹50,000 depending on page count, custom features, and content requirements.' }
     ],
     relatedIndustrySlugs: ['small-businesses', 'coaching-centres', 'salons', 'restaurants'],
     seoTitle: 'Business Website Development for Small Businesses | Sygmia Innovative',
@@ -91,6 +94,7 @@ export const SERVICES_DATA: Record<string, ServiceItem> = {
     tagline: 'Transform Existing Digital Assets',
     heroHeadline: 'Turn an outdated, ineffective website into a customer conversion engine.',
     heroSubtitle: 'We fix bad mobile layouts, slow loading speeds, confusing navigation, and weak lead flow without throwing away what already works.',
+    pricingGuidance: 'Website redesign projects typically range from ₹10,000 to ₹35,000 based on existing page volume, speed fixes, and structural UI changes.',
     problemHeadline: 'Is your current website costing you potential customers?',
     problemStatement: 'If visitors leave your site in seconds or you never get enquiries from your web presence, your site suffers from structural UX, speed, or positioning flaws.',
     problems: [
@@ -136,6 +140,7 @@ export const SERVICES_DATA: Record<string, ServiceItem> = {
     tagline: 'Eliminate Repetitive Manual Work',
     heroHeadline: 'Connect your website, customer enquiries, and daily business workflows.',
     heroSubtitle: 'Stop copying lead data manually, losing track of WhatsApp messages, or managing appointments on paper. Put your operations on autopilot.',
+    pricingGuidance: 'Automation projects typically range from ₹15,000 to ₹45,000 depending on workflow complexity, triggers, and third-party API integrations.',
     problemHeadline: 'The hidden cost of manual business administration',
     problemStatement: 'Small business owners waste hours every day manually responding to repetitive questions, scheduling appointments, and manually tracking enquiries in notebooks or scattered chats.',
     problems: [
@@ -181,6 +186,7 @@ export const SERVICES_DATA: Record<string, ServiceItem> = {
     tagline: 'Tailored Digital Tools for Your Business',
     heroHeadline: 'Software built around your exact business process — not the other way around.',
     heroSubtitle: 'When off-the-shelf software is too bloated, too expensive, or doesn\'t match how your business actually operates, we build custom tools that fit.',
+    pricingGuidance: 'Custom business software projects typically start from ₹35,000 depending on database schema, user role permissions, and custom features.',
     problemHeadline: 'Tired of forcing your team into rigid, complex software packages?',
     problemStatement: 'Off-the-shelf SaaS tools often require monthly fees per seat, force you to change your operations to match their system, and hide key features behind high enterprise tiers.',
     problems: [
@@ -226,6 +232,7 @@ export const SERVICES_DATA: Record<string, ServiceItem> = {
     tagline: 'Sell Your Products Online Direct',
     heroHeadline: 'High-converting e-commerce stores built to sell without hefty platform commissions.',
     heroSubtitle: 'Launch a fast, beautiful online store with instant payment gateway integration, product catalogs, order tracking, and mobile-first checkout.',
+    pricingGuidance: 'E-commerce store projects typically range from ₹25,000 to ₹60,000 depending on product catalog size, variant logic, and payment integrations.',
     problemHeadline: 'Why traditional e-commerce platforms hurt small brand margins',
     problemStatement: 'SaaS e-commerce platforms charge recurring monthly fees, transaction cuts, and plug-in fees, while marketplace apps hijack your customer data and charge 25-30% commissions.',
     problems: [
@@ -271,6 +278,7 @@ export const SERVICES_DATA: Record<string, ServiceItem> = {
     tagline: 'Capture, Organize & Convert Every Enquiry',
     heroHeadline: 'Never lose a customer lead to scattered messages or slow follow-ups.',
     heroSubtitle: 'Centralize customer enquiries from your website, WhatsApp, phone calls, and ads into a clean, simple sales pipeline dashboard.',
+    pricingGuidance: 'Lead management systems typically range from ₹15,000 to ₹35,000 depending on lead channels, team permissions, and alert triggers.',
     problemHeadline: 'Are customer enquiries slipping through the cracks?',
     problemStatement: 'When leads arrive across WhatsApp, Instagram DMs, email forms, and phone calls, sales opportunities get forgotten, resulting in lost revenue.',
     problems: [
@@ -316,6 +324,7 @@ export const SERVICES_DATA: Record<string, ServiceItem> = {
     tagline: 'Automate 24/7 Service Scheduling',
     heroHeadline: 'Let customers book appointments 24/7 without phone calls or manual scheduling.',
     heroSubtitle: 'Eliminate double bookings, reduce no-shows with automated WhatsApp reminders, and accept appointment deposits online.',
+    pricingGuidance: 'Custom booking engines typically range from ₹15,000 to ₹35,000 depending on calendar sync, deposit gateway, and staff rosters.',
     problemHeadline: 'The operational headache of manual booking management',
     problemStatement: 'Answering constant phone calls to check availability, handling client rescheduling, and suffering from client no-shows consumes hours of productive work every day.',
     problems: [
@@ -361,6 +370,7 @@ export const SERVICES_DATA: Record<string, ServiceItem> = {
     tagline: 'Instant Customer Engagement via WhatsApp',
     heroHeadline: 'Turn WhatsApp into an automated sales and customer service channel.',
     heroSubtitle: 'Send instant auto-replies, share product brochures, send payment links, and trigger automated follow-ups directly on WhatsApp.',
+    pricingGuidance: 'WhatsApp automation setups typically range from ₹12,000 to ₹30,000 depending on chatbot menu options, catalog links, and trigger rules.',
     problemHeadline: 'Why manual WhatsApp messaging limits your business growth',
     problemStatement: 'Customers expect immediate replies on WhatsApp. When your staff is busy or offline, interested prospects leave for competitors who answer faster.',
     problems: [
@@ -400,3 +410,4 @@ export const SERVICES_DATA: Record<string, ServiceItem> = {
     metaDescription: 'Automate WhatsApp customer service, instant brochure sharing, booking confirmations, and lead follow-ups for your business.'
   }
 };
+

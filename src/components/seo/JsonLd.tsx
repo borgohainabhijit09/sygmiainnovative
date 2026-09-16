@@ -28,20 +28,16 @@ export function generateOrganizationSchema() {
       description: 'Sygmia Innovative helps small businesses and organizations build, improve, and automate high-performance websites, custom web apps, and digital workflows.',
       telephone: '+919113067486',
       email: 'info@sygmiainnovative.co.in',
-      address: [
-        {
-          '@type': 'PostalAddress',
-          addressLocality: 'Dibrugarh',
-          addressRegion: 'Assam',
-          addressCountry: 'IN'
-        },
-        {
-          '@type': 'PostalAddress',
-          addressLocality: 'Bangalore',
-          addressRegion: 'Karnataka',
-          addressCountry: 'IN'
-        }
-      ],
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Dibrugarh',
+        addressRegion: 'Assam',
+        addressCountry: 'IN'
+      },
+      areaServed: {
+        '@type': 'Country',
+        name: 'India'
+      },
       sameAs: [
         'https://www.facebook.com/sygmiainnovative',
         'https://www.linkedin.com/company/sygmiainnovative',
@@ -62,6 +58,7 @@ export function generateOrganizationSchema() {
     }
   ];
 }
+
 
 export function generateServiceSchema(name: string, description: string, url: string) {
   return {

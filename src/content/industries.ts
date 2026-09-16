@@ -204,53 +204,54 @@ export const INDUSTRIES_DATA: Record<string, IndustryItem> = {
     slug: 'restaurants',
     name: 'Restaurants, Cafes & Food Businesses',
     heroTagline: 'Digital Ordering & Presence for Food Businesses',
-    heroHeadline: 'Put your menu online, take direct orders, and drive dine-in visits.',
-    heroSubtitle: 'Eliminate heavy commission fees from third-party platforms. Build a direct digital menu, table reservation system, and brand presence.',
-    ctaText: 'Talk About Your Restaurant',
-    problemHeadline: 'Why food businesses struggle with direct digital customer relationships',
-    problemStatement: 'Relying solely on third-party aggregators cuts deep into profit margins, while outdated PDF menus on social media frustrate hungry customers.',
+    heroHeadline: 'Professional restaurant websites & direct ordering workflows.',
+    heroSubtitle: 'Whether you simply need a clean digital menu and location site or a full direct-ordering & QR table management system, Sygmia builds practical food business solutions.',
+    ctaText: 'Get My Restaurant Website Quote',
+    problemHeadline: 'Solving the digital challenges of modern food businesses',
+    problemStatement: 'Relying solely on third-party food aggregators cuts 25-30% into your order margins, while outdated PDF menus frustrates hungry smartphone customers.',
     problems: [
-      'Customers struggling to read blurry PDF menus on mobile screens',
-      'High aggregator commissions eating up 25-30% of order revenue',
-      'No way to capture customer contact info for repeat marketing or offers',
-      'Manual phone handling during busy peak dining hours for table reservations'
+      'Customers struggling to read blurry social media PDF menus on mobile screens',
+      'High aggregator commission fees eating up 25-30% of profit margins',
+      'No way to capture customer contact info for direct repeat offers',
+      'Manual phone calls during busy dining hours for table reservations'
     ],
     bucketOverview: {
       getOnline: [
-        'Mobile-optimized digital menu',
-        'Ambiance photo gallery & location guide',
-        'Direct WhatsApp order link',
-        'Google Business Profile syncing'
+        'Mobile-optimized digital restaurant website',
+        'Clean photo gallery, menu & location guide',
+        'Direct WhatsApp inquiry & order links',
+        'Google Business Profile integration'
       ],
       improve: [
         'Fast QR code menu experience',
-        'Dine-in table booking optimization',
         'Local SEO ranking for dining searches',
-        'High-converting landing page layout'
+        'Dine-in table booking & contact flow',
+        'High-converting mobile layout'
       ],
       automate: [
-        'Direct online delivery/pickup order engine',
+        'Direct delivery/pickup order engine',
         'Automated table reservation management',
-        'WhatsApp order status updates',
-        'Customer feedback & review collection'
+        'WhatsApp order status notifications',
+        'Direct customer feedback collection'
       ]
     },
-    workflowHeadline: 'The direct restaurant customer experience',
+    workflowHeadline: 'Two tailored options for your restaurant',
     workflowSteps: [
-      { step: '01', stage: 'Discovery', description: 'Customer searches for nearby dining or scans QR code at table.' },
-      { step: '02', stage: 'Digital Menu', description: 'Explores interactive menu with photos, dietary tags, and clear pricing.' },
-      { step: '03', stage: 'Order or Reserve', description: 'Selects items for pickup/delivery or reserves a table for the evening.' },
-      { step: '04', stage: 'Kitchen Alert', description: 'Order details sent directly to kitchen display or restaurant WhatsApp.' },
-      { step: '05', stage: 'Fulfillment', description: 'Customer receives confirmation and real-time status update.' }
+      { step: 'Option 01', stage: 'Restaurant Website', description: 'Menu, Gallery, Location, Contact/WhatsApp, Reservation options, SEO & Mobile-friendly UI.' },
+      { step: 'Option 02', stage: 'Restaurant Ordering & Automation', description: 'QR menu, Online ordering, Order management, Table management & direct workflows.' },
+      { step: '03', stage: 'Customer Discovery', description: 'Nearby food lovers discover your menu on Google Search or Maps.' },
+      { step: '04', stage: 'Direct Action', description: 'Customer views dish photos and orders directly on WhatsApp or reserves a table.' },
+      { step: '05', stage: 'Zero Commission', description: 'You retain 100% of your food order margins and build direct customer loyalty.' }
     ],
-    solutionHeadline: 'Take back control of your customer relationships & margins',
-    solutionCopy: 'We build lightning-fast digital menus and direct ordering workflows that keep your brand front-and-center while saving high commission costs.',
+    solutionHeadline: 'Simple presence or advanced ordering — you choose what fits',
+    solutionCopy: 'We build lightning-fast restaurant websites that highlight your culinary delights, make menu browsing effortless, and save heavy platform commission fees.',
     faqs: [
-      { question: 'Can customers view our menu via QR codes?', answer: 'Yes! We generate high-speed QR codes linked directly to your clean digital menu.' },
-      { question: 'Do we pay commissions on direct orders?', answer: 'Zero commissions. You own your ordering platform completely.' }
+      { question: 'What if I only want a simple restaurant website without complex ordering?', answer: 'We build clean, affordable restaurant websites with your menu, location, photos, and WhatsApp contact button without forcing you into complex software.' },
+      { question: 'Do we pay commissions on direct orders?', answer: 'Zero commissions. You own your ordering platform completely.' },
+      { question: 'Can customers scan QR codes at tables to see our menu?', answer: 'Yes! We generate high-speed QR codes linked directly to your clean digital menu.' }
     ],
     relatedServiceSlugs: ['business-websites', 'business-automation', 'custom-business-software'],
-    featuredProjectSlug: 'artisan-bakes-digital',
+    featuredProjectSlug: 'resto-buddy-saas',
     seoTitle: 'Restaurant Website Development & Digital Menu Systems | Sygmia',
     metaDescription: 'Digital menus, direct ordering systems, and table reservation web solutions for restaurants, cafes, and bakeries.'
   },
@@ -465,5 +466,218 @@ export const INDUSTRIES_DATA: Record<string, IndustryItem> = {
     relatedServiceSlugs: ['business-websites', 'lead-management', 'whatsapp-automation', 'booking-systems'],
     seoTitle: 'Real Estate Website Development & Property Lead Generation | Sygmia Innovative',
     metaDescription: 'Property showcase portals, interactive project landing pages, site visit scheduling, and WhatsApp lead automation for real estate.'
+  },
+  'travel-agencies': {
+    slug: 'travel-agencies',
+    name: 'Travel Agencies & Tour Operators',
+    heroTagline: 'Digital Tour Packages & Booking Systems',
+    heroHeadline: 'Showcase tour itineraries, capture travel inquiries, and book custom trips.',
+    heroSubtitle: 'Build a high-converting travel website featuring interactive day-wise itineraries, package pricing guides, lead capture, and direct WhatsApp trip customizer.',
+    ctaText: 'Talk About Your Travel Agency',
+    problemHeadline: 'Why travel agencies lose prospective travelers',
+    problemStatement: 'Travelers want clear day-by-day itineraries, inclusions, transparency, and quick WhatsApp responses when planning holidays.',
+    problems: [
+      'Sending messy PDF itineraries over WhatsApp that get lost in chat history',
+      'No central search for destination tour packages and seasonal deals',
+      'Manual response delays resulting in travelers booking with online portals',
+      'Inability to capture structured trip preferences (budget, dates, guests)'
+    ],
+    bucketOverview: {
+      getOnline: [
+        'Travel agency website & tour package catalog',
+        'Day-wise visual itineraries & inclusions',
+        'Custom trip inquiry builder',
+        'Direct WhatsApp itinerary shortcut'
+      ],
+      improve: [
+        'Mobile tour itinerary viewing',
+        'Destination search & filter UX',
+        'SEO ranking for regional tour packages',
+        'Traveler trust & review showcase'
+      ],
+      automate: [
+        'Instant WhatsApp itinerary PDF dispatch',
+        'Automated trip inquiry lead routing',
+        'Traveler preference intake form',
+        'Seasonal deal broadcast campaigns'
+      ]
+    },
+    workflowHeadline: 'The traveler inquiry & booking workflow',
+    workflowSteps: [
+      { step: '01', stage: 'Destination Search', description: 'Traveler searches for tour packages to their dream destination.' },
+      { step: '02', stage: 'Itinerary Review', description: 'Explores day-by-day schedules, hotel tiers, inclusions, and package cost.' },
+      { step: '03', stage: 'Customization Request', description: 'Submits trip dates, guest count, and special requests via simple form.' },
+      { step: '04', stage: 'Instant WhatsApp Dispatch', description: 'Receives detailed itinerary breakdown and quotation on WhatsApp.' },
+      { step: '05', stage: 'Booking Confirmation', description: 'Finalizes trip details with your travel agent and confirms booking.' }
+    ],
+    solutionHeadline: 'Present irresistible travel itineraries that turn inquiries into bookings',
+    solutionCopy: 'We build visually captivating travel agency websites that highlight your destination expertise and automate itinerary sharing.',
+    faqs: [
+      { question: 'Can travelers customize their itineraries online?', answer: 'Yes! We build simple inquiry forms where travelers can specify dates, budget, hotel preferences, and activities.' },
+      { question: 'Can we send PDF itineraries directly on WhatsApp?', answer: 'Absolutey! When a lead selects a tour package, our system dispatches the complete itinerary on WhatsApp.' }
+    ],
+    relatedServiceSlugs: ['business-websites', 'lead-management', 'whatsapp-automation'],
+    seoTitle: 'Travel Agency Website Development & Tour Package Systems | Sygmia',
+    metaDescription: 'Custom travel agency websites, interactive day-wise tour itineraries, trip inquiry forms, and WhatsApp automation.'
+  },
+  'ngos': {
+    slug: 'ngos',
+    name: 'NGOs & Non-Profit Organizations',
+    heroTagline: 'Impact Digital Portals for Non-Profits',
+    heroHeadline: 'Communicate your mission, showcase impact stories, and drive supporter contributions.',
+    heroSubtitle: 'Build a trustworthy, transparent digital presence for your organization to engage donors, recruit volunteers, and highlight community initiatives.',
+    ctaText: 'Talk About Your Organization',
+    problemHeadline: 'The digital challenges facing non-profit organizations',
+    problemStatement: 'Donors and grant partners demand clear evidence of impact, financial transparency, and simple ways to contribute online.',
+    problems: [
+      'Outdated websites that fail to demonstrate real on-the-ground impact',
+      'No online donation gateway setup for instant digital contributions',
+      'Difficulty collecting volunteer applications and event registrations',
+      'Lack of accessible annual reports and program document downloads'
+    ],
+    bucketOverview: {
+      getOnline: [
+        'Authoritative non-profit website',
+        'Mission, vision & initiative showcase',
+        'Impact story photo & video galleries',
+        'Direct WhatsApp contact & inquiry'
+      ],
+      improve: [
+        'Mobile donation & contribution UX',
+        'Annual report & brochure download portal',
+        'SEO for cause-related searches',
+        'Trust & transparency badge display'
+      ],
+      automate: [
+        'Digital donation gateway (Razorpay / UPI)',
+        'Automated 80G tax exemption receipt email',
+        'Volunteer application intake pipeline',
+        'Supporter newsletter broadcast system'
+      ]
+    },
+    workflowHeadline: 'The supporter & donor engagement journey',
+    workflowSteps: [
+      { step: '01', stage: 'Cause Discovery', description: 'Supporter discovers your initiative via search, news, or referral.' },
+      { step: '02', stage: 'Impact Verification', description: 'Reads real field project stories, photo proof, and financial reports.' },
+      { step: '03', stage: 'Action Selection', description: 'Chooses to donate online, volunteer, or partner on a community project.' },
+      { step: '04', stage: 'Contribution / Registration', description: 'Completes digital donation or submits volunteer registration form.' },
+      { step: '05', stage: 'Automated Receipt & Thank You', description: 'Receives instant digital payment receipt and donation acknowledgement.' }
+    ],
+    solutionHeadline: 'Build deep trust with donors and scale your social impact',
+    solutionCopy: 'We build transparent, impact-driven websites for non-profits, foundations, and social enterprises that inspire supporters to get involved.',
+    faqs: [
+      { question: 'Can donors pay directly via GPay, UPI, or Credit Cards?', answer: 'Yes! We integrate secure Indian & international payment gateways like Razorpay with zero monthly fees.' },
+      { question: 'Can we upload downloadable annual reports and audited statements?', answer: 'Yes, we structure clean resource centers for PDF document downloads.' }
+    ],
+    relatedServiceSlugs: ['business-websites', 'website-redesign', 'lead-management'],
+    seoTitle: 'NGO & Non-Profit Website Development | Sygmia Innovative',
+    metaDescription: 'Impact websites, digital donation gateway integration, annual report portals, and volunteer intake systems for non-profits and NGOs.'
+  },
+  'ecommerce-brands': {
+    slug: 'ecommerce-brands',
+    name: 'E-commerce Brands & Retail',
+    heroTagline: 'Direct-to-Consumer Online Store Systems',
+    heroHeadline: 'Sell your products online directly with zero marketplace commissions.',
+    heroSubtitle: 'Launch a high-converting D2C e-commerce store with instant UPI payments, mobile checkout, product catalog management, and automated WhatsApp order alerts.',
+    ctaText: 'Talk About Your Product Store',
+    problemHeadline: 'Why selling only on marketplaces limits your brand potential',
+    problemStatement: 'Marketplaces charge 25-30% commissions, hijack your customer relationships, and prevent you from building direct brand equity.',
+    problems: [
+      'High marketplace fees eating away at product gross margins',
+      'No ownership over customer emails and phone numbers for repeat marketing',
+      'Slow mobile checkout experiences causing high cart abandonment',
+      'Complex inventory setup and payment gateway integration headaches'
+    ],
+    bucketOverview: {
+      getOnline: [
+        'Custom D2C e-commerce storefront',
+        'Mobile product catalog & category filters',
+        'Integrated UPI, Card & Netbanking checkout',
+        'WhatsApp direct order confirmation'
+      ],
+      improve: [
+        'Lightning-fast mobile page speed',
+        'High-converting product detail UI',
+        'E-commerce product schema for Google Shopping',
+        'Customer review & social proof integration'
+      ],
+      automate: [
+        'Automated WhatsApp shipping & order status',
+        'Abandoned cart recovery messages',
+        'Customer purchase history database',
+        'Promotional coupon & discount engine'
+      ]
+    },
+    workflowHeadline: 'The direct e-commerce purchase journey',
+    workflowSteps: [
+      { step: '01', stage: 'Product Discovery', description: 'Customer lands on product page from search, social ad, or referral.' },
+      { step: '02', stage: 'Catalog Selection', description: 'Browses high-res product photos, size/variant options, and pricing.' },
+      { step: '03', stage: 'One-Click Checkout', description: 'Enters delivery address and pays instantly via UPI (GPay/PhonePe) or Card.' },
+      { step: '04', stage: 'Instant WhatsApp Receipt', description: 'Receives instant order confirmation receipt and tracking code on WhatsApp.' },
+      { step: '05', stage: 'Delivery & Repeat Sale', description: 'Product arrives; customer is added to your direct brand database for future offers.' }
+    ],
+    solutionHeadline: 'Build a profitable, commission-free digital sales channel',
+    solutionCopy: 'We engineer fast, beautiful e-commerce web applications optimized for mobile buying habits and direct customer relationships.',
+    faqs: [
+      { question: 'Do we pay commissions on sales made through our website?', answer: 'Zero sales commissions! You keep 100% of your product revenue.' },
+      { question: 'Can customers pay using GPay, PhonePe, and Paytm UPI?', answer: 'Yes, we integrate direct UPI payment buttons for fast 1-tap mobile payments.' }
+    ],
+    relatedServiceSlugs: ['ecommerce', 'business-websites', 'whatsapp-automation'],
+    seoTitle: 'E-commerce Website Development & D2C Stores | Sygmia Innovative',
+    metaDescription: 'Commission-free e-commerce storefronts, fast mobile checkout, UPI payment gateway setup, and WhatsApp order automation for retail brands.'
+  },
+  'distributors': {
+    slug: 'distributors',
+    name: 'Distributors & Wholesale Suppliers',
+    heroTagline: 'B2B Wholesale Ordering & Dealer Portals',
+    heroHeadline: 'Streamline bulk ordering, dealer inquiries, and wholesale catalog management.',
+    heroSubtitle: 'Replace manual phone orders and WhatsApp price list messages with a digital B2B dealer portal, wholesale catalog, and bulk inquiry engine.',
+    ctaText: 'Talk About Your Distribution Business',
+    problemHeadline: 'The operational complexity in B2B wholesale distribution',
+    problemStatement: 'Handling manual phone calls for stock availability, sending PDF price lists to hundreds of dealers, and processing handwritten orders leads to costly mistakes.',
+    problems: [
+      'Dealers constantly calling staff to check stock availability and wholesale rates',
+      'Sending outdated PDF price sheets that cause pricing discrepancies',
+      'Processing bulk orders manually via fragmented WhatsApp messages',
+      'No central portal for new dealer applications and credit term checks'
+    ],
+    bucketOverview: {
+      getOnline: [
+        'B2B distributor portal & brand showcase',
+        'Filterable wholesale product directory',
+        'New dealer registration & inquiry form',
+        'Direct WhatsApp sales desk connection'
+      ],
+      improve: [
+        'Bulk volume tier pricing calculator',
+        'Mobile catalog browsing for field reps',
+        'SEO for regional wholesale distribution terms',
+        'Dealer trust credential display'
+      ],
+      automate: [
+        'Private dealer login & order portal',
+        'Automated wholesale order summary PDF',
+        'Stock alert notifications on WhatsApp',
+        'B2B customer account management'
+      ]
+    },
+    workflowHeadline: 'The B2B dealer ordering workflow',
+    workflowSteps: [
+      { step: '01', stage: 'Dealer Onboarding', description: 'Retailer or dealer applies for wholesale account on your portal.' },
+      { step: '02', stage: 'Catalog Review', description: 'Browses wholesale SKU list, minimum order quantities (MOQs), and tier pricing.' },
+      { step: '03', stage: 'Bulk Inquiry / Order', description: 'Selects quantities across multiple product SKUs and submits wholesale order.' },
+      { step: '04', stage: 'Automated Invoice Summary', description: 'System generates structured purchase inquiry payload sent to your sales desk.' },
+      { step: '05', stage: 'Dispatch & Settlement', description: 'Sales team verifies inventory, confirms credit/payment, and dispatches goods.' }
+    ],
+    solutionHeadline: 'Modernize your distribution business with effortless B2B digital workflows',
+    solutionCopy: 'We build practical B2B wholesale web systems that save staff time, reduce order entry errors, and give your dealers a professional 24/7 ordering experience.',
+    faqs: [
+      { question: 'Can we restrict wholesale pricing so only approved dealers can see it?', answer: 'Yes! We can create password-protected dealer sections or require inquiry verification.' },
+      { question: 'Can field sales reps use this site to place orders for customers on mobile?', answer: 'Absolutey! The mobile interface is designed for fast, frictionless multi-item ordering.' }
+    ],
+    relatedServiceSlugs: ['business-websites', 'custom-business-software', 'lead-management', 'ecommerce'],
+    seoTitle: 'Distributor & Wholesale B2B Website Development | Sygmia Innovative',
+    metaDescription: 'B2B wholesale web portals, dealer inquiry management, bulk order calculators, and distributor product catalogs.'
   }
 };
+

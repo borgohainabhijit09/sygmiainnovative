@@ -15,7 +15,15 @@ import {
   Store,
   GraduationCap,
   Scissors,
-  Utensils
+  Utensils,
+  Plane,
+  Heart,
+  ShoppingCart,
+  Truck,
+  Building,
+  Briefcase,
+  Factory,
+  Dumbbell
 } from 'lucide-react';
 import { INDUSTRIES_DATA } from '@/content/industries';
 import { SERVICES_DATA } from '@/content/services';
@@ -23,6 +31,7 @@ import { WORK_DATA } from '@/content/work';
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 import { JsonLd, generateServiceSchema, generateFaqSchema } from '@/components/seo/JsonLd';
 import { StartConversationButton } from '@/components/buttons/StartConversationButton';
+import { ProjectProof } from '@/components/proof/ProjectProof';
 
 export async function generateStaticParams() {
   return Object.keys(INDUSTRIES_DATA).map((slug) => ({ slug }));
@@ -58,7 +67,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
 
   const featuredProject = industry.featuredProjectSlug 
     ? WORK_DATA[industry.featuredProjectSlug] 
-    : null;
+    : Object.values(WORK_DATA).find(w => w.industrySlug === slug) || null;
 
   const whatsappUrl = `https://wa.me/919113067486?text=Hello%20Sygmia%20Innovative,%20I'd%20like%20to%20discuss%20${encodeURIComponent(industry.name)}%20solutions.`;
 
@@ -67,7 +76,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
       
       {/* Structured Data */}
       <JsonLd schema={[
-        generateServiceSchema(industry.name, industry.metaDescription, `https://sygmia.com/industries/${industry.slug}`),
+        generateServiceSchema(industry.name, industry.metaDescription, `https://sygmiainnovative.co.in/industries/${industry.slug}`),
         generateFaqSchema(industry.faqs)
       ]} />
 
@@ -134,6 +143,14 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
                       {slug === 'coaching-centres' && <GraduationCap className="w-6 h-6" />}
                       {slug === 'salons' && <Scissors className="w-6 h-6" />}
                       {slug === 'restaurants' && <Utensils className="w-6 h-6" />}
+                      {slug === 'gyms' && <Dumbbell className="w-6 h-6" />}
+                      {slug === 'consultants' && <Briefcase className="w-6 h-6" />}
+                      {slug === 'manufacturers' && <Factory className="w-6 h-6" />}
+                      {slug === 'real-estate' && <Building className="w-6 h-6" />}
+                      {slug === 'travel-agencies' && <Plane className="w-6 h-6" />}
+                      {slug === 'ngos' && <Heart className="w-6 h-6" />}
+                      {slug === 'ecommerce-brands' && <ShoppingCart className="w-6 h-6" />}
+                      {slug === 'distributors' && <Truck className="w-6 h-6" />}
                     </div>
                     <div>
                       <h3 className="text-lg font-bold text-white">{industry.name}</h3>
@@ -267,36 +284,25 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
         </div>
       </section>
 
-      {/* FEATURED CASE STUDY IF AVAILABLE */}
+      {/* FEATURED CASE STUDY / PROOF Component */}
       {featuredProject && (
-        <section className="glass-card p-8 border border-indigo-500/30 space-y-6">
-          <div className="flex items-center justify-between">
-            <span className="badge-indigo">Featured Industry Case Study</span>
-            <span className="text-xs text-emerald-400 font-semibold">{featuredProject.serviceCategory}</span>
+        <section className="space-y-6">
+          <div className="space-y-2">
+            <span className="badge-indigo">Industry Proof of Work</span>
+            <h2 className="text-3xl font-bold text-white tracking-tight">See what this can look like</h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="md:col-span-2 space-y-3">
-              <h3 className="text-2xl font-bold text-white">{featuredProject.title}</h3>
-              <p className="text-xs text-slate-300 leading-relaxed">{featuredProject.summary}</p>
-              <div className="pt-2">
-                <Link href={`/work/${featuredProject.slug}`} className="btn-secondary text-xs">
-                  <span>Read Full Case Study</span>
-                  <ChevronRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </div>
-
-            <div className="space-y-2 bg-white/5 p-4 rounded-xl">
-              <div className="text-xs font-bold text-slate-300">Key Outcomes:</div>
-              {featuredProject.outcomes.map((m, i) => (
-                <div key={i} className="flex items-center justify-between text-xs">
-                  <span className="text-slate-400">{m.label}:</span>
-                  <span className="font-bold text-emerald-400">{m.value}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+          <ProjectProof
+            projectName={featuredProject.title}
+            projectType={featuredProject.serviceCategory}
+            industry={featuredProject.industryName}
+            screenshot={featuredProject.imageUrl}
+            description={featuredProject.summary}
+            liveUrl={featuredProject.websiteUrl}
+            caseStudyUrl={`/work/${featuredProject.slug}`}
+            isDemo={featuredProject.isDemo}
+            outcomes={featuredProject.outcomes}
+          />
         </section>
       )}
 
@@ -353,7 +359,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-secondary text-sm px-8 py-3 text-emerald-400 border-emerald-500/30 hover:bg-emerald-500/10"
+            className="btn-secondary text-sm px-8 py-3 text-emerald-400 border-emerald-500/30 hover:bg-emerald-500/10 flex items-center gap-2"
           >
             <MessageSquare className="w-4 h-4" /> WhatsApp Us
           </a>
@@ -363,3 +369,4 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
     </div>
   );
 }
+

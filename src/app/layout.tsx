@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { JsonLd, generateOrganizationSchema } from "@/components/seo/JsonLd";
 import { ContactModalProvider } from "@/components/modals/ContactModalContext";
 import { WhatsAppWidget } from "@/components/layout/WhatsAppWidget";
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,10 +21,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://sygmiainnovative.co.in"),
   title: {
-    default: "Sygmia Innovative — High-Impact Digital Solutions for Small Businesses",
+    default: "Sygmia Innovative — Digital Solutions for Small Businesses & Organizations",
     template: "%s | Sygmia Innovative"
   },
-  description: "Sygmia Innovative helps small businesses, restaurants, coaching centers, and organizations build high-performance websites, modernize existing sites, and automate business processes.",
+  description: "Sygmia Innovative helps small businesses and organizations build websites, improve digital experiences, and automate business processes.",
   keywords: [
     "small business web development",
     "website redesign company",
@@ -31,8 +32,8 @@ export const metadata: Metadata = {
     "custom software development",
     "Sygmia Innovative",
     "Dibrugarh website design",
-    "Bangalore web development",
-    "restaurant SaaS portal",
+    "online business solutions",
+    "restaurant digital menu",
     "coaching center website",
     "salon booking portal"
   ],
@@ -65,7 +66,7 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: "Sygmia Innovative — High-Impact Digital Solutions for Small Businesses",
+    title: "Sygmia Innovative — Digital Solutions for Small Businesses & Organizations",
     description: "Build, modernize, and automate your digital operations with Sygmia Innovative. Modern web apps, process automation, and practical business software.",
     url: "https://sygmiainnovative.co.in",
     siteName: "Sygmia Innovative",
@@ -82,7 +83,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sygmia Innovative — High-Impact Digital Solutions",
+    title: "Sygmia Innovative — Digital Solutions for Small Businesses",
     description: "Sygmia helps small businesses build high-performance websites, modernize existing sites, and automate business processes.",
     images: ["/images/hero-devices.png"]
   }
@@ -100,6 +101,7 @@ export default function RootLayout({
     >
       <head>
         <JsonLd schema={generateOrganizationSchema()} />
+        <GoogleAnalytics />
       </head>
       <body className="min-h-full flex flex-col bg-[#070a11] text-slate-100 selection:bg-indigo-500 selection:text-white">
         <ContactModalProvider>
@@ -114,3 +116,4 @@ export default function RootLayout({
     </html>
   );
 }
+

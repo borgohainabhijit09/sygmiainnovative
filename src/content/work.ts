@@ -12,6 +12,7 @@ export interface CaseStudyItem {
   industryName: string;
   serviceCategory: string;
   category: 'live' | 'demo';
+  isDemo: boolean;
   tagline: string;
   summary: string;
   problem: string;
@@ -36,14 +37,15 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
     industryName: 'Restaurants & Bakeries',
     serviceCategory: 'E-Commerce & Dynamic Pricing Platform',
     category: 'live',
+    isDemo: false,
     tagline: 'Premium Bakery E-Commerce & Wholesale Bulk Ordering System',
     summary: 'Engineered a modern luxury bakery e-commerce platform featuring dynamic tier-based volume pricing, category navigation, and automated WhatsApp inquiry routing.',
     problem: 'Hasty Tasty needed a premier direct-to-consumer e-commerce storefront to showcase their artisanal bakery delights, manage dynamic bulk pricing tiers for B2B corporate orders, and capture direct customer inquiries without relying solely on food aggregators.',
     solution: 'Built a high-performance Next.js web storefront with automated tier pricing ("Order More, Save More"), streamlined category filtering, Google Maps store locator, and direct WhatsApp customer support.',
     outcomes: [
-      { label: 'Direct Online Sales', value: '+185%', context: 'Increase in direct digital orders' },
-      { label: 'Corporate Bulk Leads', value: '3.5x', context: 'Growth in B2B wholesale requests' },
-      { label: 'Page Load Speed', value: '0.6s', context: 'Turbopack optimized asset delivery' }
+      { label: 'Storefront Model', value: 'Direct D2C & B2B', context: 'Retail bakery catalog with wholesale inquiry matrix' },
+      { label: 'Core Capability', value: 'Tier Volume Pricing', context: 'Automated discount rules based on order quantity' },
+      { label: 'Primary Channel', value: 'WhatsApp Direct', context: 'Instant pre-formatted order inquiry dispatch' }
     ],
     capabilities: [
       'Dynamic Tiered Volume Pricing Matrix',
@@ -66,14 +68,15 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
     industryName: 'Landscape & Outdoor Design',
     serviceCategory: 'Bespoke Web Design & Portfolio System',
     category: 'live',
+    isDemo: false,
     tagline: 'High-End Landscape Architecture Showcase & Consultation Engine',
     summary: 'Designed an elegant, editorial-grade web experience featuring interactive Before/After image transformation sliders, full-screen project galleries, and consultation booking.',
     problem: 'Julie Hull Landscape Design (Newmarket, ON) needed a refined digital presence that visually communicated over 20 years of outdoor architecture expertise, built instant trust with premium homeowners, and streamlined consultation requests.',
     solution: 'Engineered an interactive portfolio website featuring drag-to-compare Before/After transformation sliders, signature project carousels, Google Reviews integration, and a structured consultation booking engine.',
     outcomes: [
-      { label: 'Qualified Consultation Leads', value: '+120%', context: 'Increase in high-value client inquiries' },
-      { label: 'Average Contract Size', value: '+35%', context: 'Increase in booked master design plans' },
-      { label: 'Google Rating Proof', value: '5.0 Stars', context: 'Integrated client testimonials & reviews' }
+      { label: 'UX Feature', value: 'Before/After Sliders', context: 'Interactive visual proof of landscape transformations' },
+      { label: 'Inquiry System', value: 'Pre-Qualified Booking', context: 'Structured intake form for residential consultations' },
+      { label: 'Trust Building', value: 'Client Reviews', context: 'Integrated 5-star Google review testimonials' }
     ],
     capabilities: [
       'Interactive Drag-to-Compare Before/After Sliders',
@@ -96,14 +99,15 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
     industryName: 'Restaurants & Hospitality',
     serviceCategory: 'SaaS Platform & Direct Ordering System',
     category: 'live',
+    isDemo: false,
     tagline: 'Unified Operating System for Direct Restaurant Ordering & Operations',
     summary: 'Architected a complete SaaS operating platform enabling independent restaurants to accept direct WhatsApp orders, eliminate aggregator commissions, and manage POS billing.',
     problem: 'Independent restaurants were losing 25-30% of order margins to third-party delivery aggregators, while struggling to manage fragmented phone ordering, POS billing, and kitchen dispatch.',
     solution: 'Developed a unified restaurant digital operating system featuring QR code dine-in menus, direct WhatsApp order routing, kitchen display screens, and automated customer loyalty management.',
     outcomes: [
-      { label: 'Aggregator Margin Reclaimed', value: '30%', context: 'Commission savings on direct customer orders' },
-      { label: 'Direct Repeat Orders', value: '+210%', context: 'Growth via WhatsApp & loyal customer database' },
-      { label: 'Onboarding Speed', value: '< 15 mins', context: 'Rapid digital restaurant setup' }
+      { label: 'Business Model', value: 'Direct Ordering', context: 'Commission-free QR menu and WhatsApp ordering' },
+      { label: 'Core Module', value: 'Kitchen Display & POS', context: 'Real-time order status and billing integration' },
+      { label: 'Setup Time', value: 'Fast Onboarding', context: 'Rapid restaurant digital menu configuration' }
     ],
     capabilities: [
       'Direct WhatsApp Ordering & Auto-Status Updates',
@@ -126,14 +130,15 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
     industryName: 'Food & Heritage Tea',
     serviceCategory: 'E-Commerce & Heritage Brand Showcase',
     category: 'live',
+    isDemo: false,
     tagline: 'Heritage Organic Tea E-Commerce & Brand Portal',
-    summary: 'Created a high-converting brand storefront celebrating indigenous organic Singpho tea, combining rich cultural story telling with direct online ordering.',
+    summary: 'Created a high-converting brand storefront celebrating indigenous organic Singpho tea, combining rich cultural storytelling with direct online ordering.',
     problem: 'Singpho Tea needed a digital presence to communicate their centuries-old heritage tea traditions and sell organic handcrafted tea directly to global customers.',
     solution: 'Designed an elegant e-commerce experience with story-driven landing sections, product catalog filtering, secure checkout, and mobile-first responsiveness.',
     outcomes: [
-      { label: 'Direct Customer Reach', value: '+230%', context: 'Growth in organic brand traffic' },
-      { label: 'Mobile Conversion Rate', value: '3.8%', context: 'Frictionless checkout experience' },
-      { label: 'Page Load Speed', value: '0.7s', context: 'High Core Web Vitals score' }
+      { label: 'Platform Type', value: 'Direct E-Commerce', context: 'Heritage story-driven organic tea store' },
+      { label: 'Mobile UX', value: 'Touch-Optimized', context: 'Frictionless mobile catalog and checkout' },
+      { label: 'SEO Setup', value: 'Structured Schema', context: 'Product & Organization schema implementation' }
     ],
     capabilities: [
       'Heritage Brand Storytelling & Media Showcase',
@@ -155,14 +160,15 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
     industryName: 'Coaching & Education',
     serviceCategory: 'Admission System & Course Portal',
     category: 'live',
+    isDemo: false,
     tagline: 'Student Onboarding & Course Inquiry Automation',
     summary: 'Built a structured education portal for CR Academy to streamline course discovery, demo class registrations, and student inquiry follow-ups.',
     problem: 'CR Academy faced high admin overhead handling manual inquiries for competitive exam batches across phone and WhatsApp.',
     solution: 'Implemented a clean course directory with direct syllabus downloads, automated student demo class booking, and admissions team notifications.',
     outcomes: [
-      { label: 'Demo Registrations', value: '+160%', context: 'Increase in prospective student trial signups' },
-      { label: 'Response Time', value: '< 2 mins', context: 'Automated student syllabus dispatch' },
-      { label: 'Staff Time Saved', value: '15 hrs/wk', context: 'Reduction in repetitive admin calls' }
+      { label: 'Portal Type', value: 'Education Portal', context: 'Batch schedules, fee matrix & demo booking' },
+      { label: 'Automation', value: 'WhatsApp Syllabus', context: 'Instant automated brochure dispatch' },
+      { label: 'Lead Flow', value: 'Structured Pipeline', context: 'Centralized admissions lead routing' }
     ],
     capabilities: [
       'Interactive Course Catalog & Fee Guide',
@@ -184,14 +190,15 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
     industryName: 'Sustainable E-Commerce',
     serviceCategory: 'E-Commerce & Product Showcase',
     category: 'live',
+    isDemo: false,
     tagline: 'Eco-Friendly Bamboo Products E-Commerce Storefront',
     summary: 'Developed a vibrant e-commerce website for eco-friendly handcrafted bamboo items, driving conscious consumer purchases and wholesale inquiries.',
     problem: 'Bambooho needed a trustworthy online store to transition from local retail to national e-commerce sales with B2B bulk inquiry capabilities.',
     solution: 'Engineered a modern product showcase with category filters, dynamic pricing inquiry forms for bulk orders, and fast mobile navigation.',
     outcomes: [
-      { label: 'Online Sales Growth', value: '+145%', context: 'Increase in direct product purchases' },
-      { label: 'B2B Wholesale Inquiries', value: '2.8x', context: 'Growth in bulk business orders' },
-      { label: 'User Engagement', value: '+70%', context: 'Increase in average session duration' }
+      { label: 'Store Model', value: 'Retail & B2B Bulk', context: 'Consumer checkout with wholesale quote form' },
+      { label: 'Design Identity', value: 'Eco Brand Aesthetics', context: 'Rich visual storytelling for sustainable products' },
+      { label: 'Mobile Speed', value: 'High Optimization', context: 'Fast asset delivery on 4G networks' }
     ],
     capabilities: [
       'E-Commerce Product Catalog & Cart',
@@ -213,14 +220,15 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
     industryName: 'Food & Culinary',
     serviceCategory: 'Digital Food Showcase & Direct Orders',
     category: 'live',
+    isDemo: false,
     tagline: 'Ethnic Delicacies Digital Ordering & Menu Portal',
     summary: 'Crafted a mouth-watering web menu and ordering portal for Tiphao, connecting culinary lovers with authentic traditional delicacies.',
     problem: 'Tiphao required a clean digital menu and order management system to capture direct customer food orders without heavy platform commissions.',
     solution: 'Designed an appetizing digital menu with category filtering, direct WhatsApp ordering, and location-based delivery information.',
     outcomes: [
-      { label: 'Direct Orders', value: '+190%', context: 'Increase in commission-free food orders' },
-      { label: 'Customer Savings', value: '25%', context: 'Margin retained on direct orders' },
-      { label: 'Mobile Menu Visits', value: '80%', context: 'Traffic from smartphone users' }
+      { label: 'Ordering Channel', value: 'WhatsApp Direct', context: 'Commission-free direct food ordering' },
+      { label: 'UI Architecture', value: 'Visual Food Menu', context: 'High-contrast mobile menu categories' },
+      { label: 'Delivery Coverage', value: 'Geo-Targeted', context: 'Location & store direction info' }
     ],
     capabilities: [
       'Interactive Food Category Menu',
@@ -242,14 +250,15 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
     industryName: 'Education & Academies',
     serviceCategory: 'Academy Portal & Student Admissions',
     category: 'live',
+    isDemo: false,
     tagline: 'Institutional Website & Student Admission System',
     summary: 'Built an authoritative institutional website highlighting academic programs, campus infrastructure, and admission registration workflows.',
     problem: 'Royal Siang Academy needed a modern digital presence to build trust with parents and simplify the student admission inquiry process.',
     solution: 'Engineered a clean academic portal featuring faculty highlights, fee structures, downloadable brochures, and online inquiry capture.',
     outcomes: [
-      { label: 'Admission Inquiries', value: '+135%', context: 'Increase in parent registration requests' },
-      { label: 'Parent Trust Score', value: '4.9/5', context: 'Feedback on clarity of information' },
-      { label: 'Mobile Traffic', value: '75%', context: 'Seamless mobile browsing experience' }
+      { label: 'Site Type', value: 'Institutional Portal', context: 'Faculty, prospectus, and fee structure directory' },
+      { label: 'Inquiry System', value: 'Online Admissions', context: 'Parent registration and brochure download' },
+      { label: 'Mobile UX', value: 'Responsive', context: 'Seamless parent browsing on smartphones' }
     ],
     capabilities: [
       'Academic Program Directory',
@@ -271,14 +280,15 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
     industryName: 'Coaching & Test Prep',
     serviceCategory: 'Course Portal & Trial Booking',
     category: 'live',
+    isDemo: false,
     tagline: 'Coaching Institute Web Portal & Demo Registration',
     summary: 'Engineered a conversion-focused coaching institute site enabling prospective students to view batch schedules and book demo sessions.',
     problem: 'Sal Coaching struggled with manual lead tracking and wanted a streamlined website to showcase student test results and batch details.',
     solution: 'Created a high-contrast educational portal with batch timing tables, faculty credentials, and instant demo session booking.',
     outcomes: [
-      { label: 'Trial Class Bookings', value: '+150%', context: 'Increase in student demo bookings' },
-      { label: 'Lead Response Speed', value: '< 3 mins', context: 'Automated WhatsApp confirmation' },
-      { label: 'Information Clarity', value: '100%', context: 'Clear batch timing matrix' }
+      { label: 'Lead Path', value: 'Demo Class Booking', context: 'Direct trial session booking form' },
+      { label: 'Information Display', value: 'Batch Timetable', context: 'Organized course & fee schedule matrix' },
+      { label: 'Communication', value: 'Instant WhatsApp', context: 'Automated student admission query link' }
     ],
     capabilities: [
       'Batch Schedule Matrix & Course Directory',
@@ -297,19 +307,20 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
   'buzz-firm-demo': {
     slug: 'buzz-firm-demo',
     title: 'Buzz Firm Corporate Demo',
-    clientName: 'Buzz Firm (Demo System)',
+    clientName: 'Buzz Firm (Concept Prototype)',
     industrySlug: 'small-businesses',
     industryName: 'Corporate & Consulting',
     serviceCategory: 'Corporate Web Solution',
     category: 'demo',
-    tagline: 'High-Convert Corporate Agency & Consulting Template',
+    isDemo: true,
+    tagline: 'High-Convert Corporate Agency & Consulting Concept Template',
     summary: 'A sleek, high-contrast corporate agency website prototype engineered for consulting firms and B2B professional services.',
     problem: 'Consulting firms often struggle to differentiate their services and communicate complex deliverables clearly.',
     solution: 'Designed a modern bento-style corporate layout featuring service capabilities, client case study highlights, and consultation booking.',
     outcomes: [
-      { label: 'Lead Path Clarity', value: '100%', context: 'High-contrast conversion CTAs' },
-      { label: 'Performance Score', value: '99/100', context: 'Lighthouse speed benchmark' },
-      { label: 'Responsive Viewports', value: 'All Devices', context: 'Seamless mobile to desktop scaling' }
+      { label: 'Layout Architecture', value: 'Bento Grid System', context: 'Modern corporate service matrix design' },
+      { label: 'System Type', value: 'Demo Prototype', context: 'High-converting agency template concept' },
+      { label: 'Device Support', value: 'Fully Responsive', context: 'Optimized layout scaling for desktop & mobile' }
     ],
     capabilities: [
       'Bento Grid Service Showcase',
@@ -326,19 +337,20 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
   'multi-cuisine-demo': {
     slug: 'multi-cuisine-demo',
     title: 'Multi-Cuisine Restaurant System',
-    clientName: 'Gourmet Bistro (Demo)',
+    clientName: 'Gourmet Bistro (Concept Prototype)',
     industrySlug: 'restaurants',
     industryName: 'Restaurants & Dining',
     serviceCategory: 'Digital Ordering & Table Booking',
     category: 'demo',
-    tagline: 'Interactive QR Menu & Table Reservation System',
-    summary: 'A full-featured restaurant web system featuring interactive multi-category food menus, table reservations, and takeaway ordering.',
+    isDemo: true,
+    tagline: 'Interactive QR Menu & Table Reservation System Concept',
+    summary: 'A full-featured restaurant web system prototype featuring interactive multi-category food menus, table reservations, and takeaway ordering.',
     problem: 'Restaurants need a seamless way to showcase multi-category menus and take online table bookings without third-party fees.',
-    solution: 'Built a rich digital restaurant experience with dish customization, QR menu scan support, and automated table booking notifications.',
+    solution: 'Built a rich digital restaurant experience prototype with dish customization, QR menu scan support, and automated table booking notifications.',
     outcomes: [
-      { label: 'Commission Saved', value: '100%', context: 'Direct restaurant booking engine' },
-      { label: 'Menu Scan Speed', value: '0.4s', context: 'Instant mobile QR loading' },
-      { label: 'Table Booking UX', value: '2 Clicks', context: 'Frictionless reservation flow' }
+      { label: 'System Type', value: 'Demo Prototype', context: 'Interactive restaurant QR menu & booking workflow' },
+      { label: 'Core Capabilities', value: 'QR Menu & Booking', context: 'Dine-in menu scanning & table reservation' },
+      { label: 'Target Segment', value: 'Fine Dining & Bistros', context: 'Designed for high-ambiance food businesses' }
     ],
     capabilities: [
       'Interactive QR Code Menu Directory',
@@ -355,19 +367,20 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
   'annapurna-restaurant-demo': {
     slug: 'annapurna-restaurant-demo',
     title: 'Annapurna South Indian Dining',
-    clientName: 'Annapurna (Demo)',
+    clientName: 'Annapurna (Concept Prototype)',
     industrySlug: 'restaurants',
     industryName: 'Traditional Dining',
     serviceCategory: 'Digital Menu & WhatsApp Ordering',
     category: 'demo',
-    tagline: 'Authentic Regional Dining & WhatsApp Ordering Portal',
+    isDemo: true,
+    tagline: 'Authentic Regional Dining & WhatsApp Ordering Portal Concept',
     summary: 'Designed for traditional regional dining, featuring authentic menu categorization, chef specials, and direct WhatsApp order dispatch.',
     problem: 'Regional food businesses need an authentic aesthetic while providing fast digital ordering capabilities for loyal customers.',
-    solution: 'Engineered a warm, regional dining website with instant WhatsApp order pre-formatting and location directions.',
+    solution: 'Engineered a warm, regional dining website prototype with instant WhatsApp order pre-formatting and location directions.',
     outcomes: [
-      { label: 'Order Friction', value: 'Zero', context: 'Direct WhatsApp order dispatch' },
-      { label: 'Menu Readability', value: '100%', context: 'Mobile optimized food categories' },
-      { label: 'Local Search SEO', value: 'Optimized', context: 'Structured restaurant schema' }
+      { label: 'System Type', value: 'Demo Prototype', context: 'Regional dining menu with WhatsApp dispatch' },
+      { label: 'UX Focus', value: 'Fast Menu Navigation', context: 'Touch-friendly food category toggles' },
+      { label: 'Schema Support', value: 'Restaurant JSON-LD', context: 'Local dining search metadata setup' }
     ],
     capabilities: [
       'Regional Culinary Category Menu',
@@ -384,19 +397,20 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
   'medicax-hospital-demo': {
     slug: 'medicax-hospital-demo',
     title: 'Medicax Hospital & Healthcare',
-    clientName: 'Medicax Hospital (Demo)',
+    clientName: 'Medicax Hospital (Concept Prototype)',
     industrySlug: 'small-businesses',
     industryName: 'Healthcare & Clinics',
     serviceCategory: 'Hospital Portal & Doctor Booking',
     category: 'demo',
-    tagline: 'Comprehensive Hospital Web Portal & Appointment System',
-    summary: 'An authoritative healthcare portal designed for hospitals and clinics featuring doctor schedules, department listings, and appointment booking.',
+    isDemo: true,
+    tagline: 'Comprehensive Hospital Web Portal & Appointment System Concept',
+    summary: 'An authoritative healthcare portal prototype designed for hospitals and clinics featuring doctor schedules, department listings, and appointment booking.',
     problem: 'Healthcare institutions require high trust, clear department navigation, and easy patient appointment booking.',
-    solution: 'Engineered a clean medical portal with doctor profiles, department directories, emergency contacts, and online consultation scheduling.',
+    solution: 'Engineered a clean medical portal prototype with doctor profiles, department directories, emergency contacts, and online consultation scheduling.',
     outcomes: [
-      { label: 'Patient Trust Rating', value: 'High', context: 'Clean medical authority UI' },
-      { label: 'Appointment Path', value: 'Streamlined', context: 'Department & doctor filtering' },
-      { label: 'Emergency Contact', value: '1-Tap', context: 'Instant mobile phone call action' }
+      { label: 'System Type', value: 'Demo Prototype', context: 'Hospital & healthcare portal prototype' },
+      { label: 'Core Modules', value: 'Doctor Directory & Booking', context: 'Department filtering and appointment scheduling' },
+      { label: 'Emergency UX', value: '1-Tap Hotline', context: 'Instant mobile emergency contact button' }
     ],
     capabilities: [
       'Department & Specialist Doctor Directory',
@@ -413,19 +427,20 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
   'ac-repair-demo': {
     slug: 'ac-repair-demo',
     title: 'CoolTech AC Repair & Services',
-    clientName: 'CoolTech (Demo)',
+    clientName: 'CoolTech (Concept Prototype)',
     industrySlug: 'small-businesses',
     industryName: 'Home Services & HVAC',
     serviceCategory: 'Service Booking & Local Lead Engine',
     category: 'demo',
-    tagline: 'HVAC & Appliance Repair Emergency Service Portal',
-    summary: 'A conversion-focused home services landing page built to dominate local searches for AC repair, maintenance, and emergency technicians.',
+    isDemo: true,
+    tagline: 'HVAC & Appliance Repair Emergency Service Portal Concept',
+    summary: 'A conversion-focused home services landing page prototype built for local HVAC, AC repair, and emergency technician businesses.',
     problem: 'Home service contractors suffer high bounce rates if emergency phone call CTAs are not immediately accessible on mobile devices.',
-    solution: 'Built a high-converting emergency service portal with click-to-call headers, transparent service rate cards, and instant booking forms.',
+    solution: 'Built a high-converting emergency service portal prototype with click-to-call headers, transparent service rate cards, and instant booking forms.',
     outcomes: [
-      { label: 'Mobile Call Conversion', value: '+210%', context: 'Instant tap-to-call placement' },
-      { label: 'Local Search Pack', value: 'Optimized', context: 'Geo-targeted service schema' },
-      { label: 'Booking Response', value: 'Immediate', context: 'Automated SMS technician alert' }
+      { label: 'System Type', value: 'Demo Prototype', context: 'Home service & HVAC booking landing page' },
+      { label: 'Lead Focus', value: 'Click-to-Call', context: 'Prominent emergency technician call action' },
+      { label: 'Pricing UX', value: 'Rate Card Display', context: 'Transparent service pricing breakdown' }
     ],
     capabilities: [
       'Click-to-Call Emergency Header',
@@ -442,19 +457,20 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
   'pest-control-demo': {
     slug: 'pest-control-demo',
     title: 'PestShield Control Services',
-    clientName: 'PestShield (Demo)',
+    clientName: 'PestShield (Concept Prototype)',
     industrySlug: 'small-businesses',
     industryName: 'Home Services & Pest Control',
     serviceCategory: 'Local Lead Generation & Booking',
     category: 'demo',
-    tagline: 'Residential & Commercial Pest Inspection Engine',
-    summary: 'A high-converting local service template designed for pest control companies, offering free inspection requests and service plans.',
+    isDemo: true,
+    tagline: 'Residential & Commercial Pest Inspection Engine Concept',
+    summary: 'A high-converting local service template concept designed for pest control companies, offering free inspection requests and service plans.',
     problem: 'Pest control clients need fast reassurance, clear eco-friendly credentials, and simple free quote requests.',
-    solution: 'Designed an authoritative service page with residential/commercial toggles, treatment process breakdowns, and instant quote forms.',
+    solution: 'Designed an authoritative service page prototype with residential/commercial toggles, treatment process breakdowns, and instant quote forms.',
     outcomes: [
-      { label: 'Quote Form Submissions', value: '3x', context: 'High-contrast lead capture form' },
-      { label: 'Service Trust Badges', value: 'Eco-Safe', context: 'Clear safety credential displays' },
-      { label: 'Mobile UX Score', value: '98/100', context: 'Touch-optimized service selectors' }
+      { label: 'System Type', value: 'Demo Prototype', context: 'Local service inspection request page concept' },
+      { label: 'Form UX', value: 'Free Inspection Form', context: 'Streamlined residential & commercial quote request' },
+      { label: 'Safety Display', value: 'Eco Credentials', context: 'Clear eco-friendly safety badges' }
     ],
     capabilities: [
       'Free Inspection Request Workflow',
@@ -471,19 +487,20 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
   'royal-arc-construction': {
     slug: 'royal-arc-construction',
     title: 'Royal Arc Construction',
-    clientName: 'Royal Arc (Demo)',
+    clientName: 'Royal Arc (Concept Prototype)',
     industrySlug: 'small-businesses',
     industryName: 'Construction & Real Estate',
     serviceCategory: 'Architecture & Project Showcase',
     category: 'demo',
-    tagline: 'Commercial & Residential Construction Showcase',
-    summary: 'A bold, premium construction and architectural firm website highlighting ongoing projects, equipment capabilities, and client consultations.',
+    isDemo: true,
+    tagline: 'Commercial & Residential Construction Showcase Concept',
+    summary: 'A bold, premium construction and architectural firm website prototype highlighting ongoing projects, equipment capabilities, and client consultations.',
     problem: 'Construction contractors require visually heavy project portfolios to win high-budget commercial and residential tenders.',
-    solution: 'Built a structural architectural showcase with project category filters, completed build galleries, and RFP submission forms.',
+    solution: 'Built a structural architectural showcase prototype with project category filters, completed build galleries, and RFP submission forms.',
     outcomes: [
-      { label: 'Portfolio Impression', value: 'High-End', context: 'Full-bleed project photography' },
-      { label: 'RFP Submission Rate', value: '+115%', context: 'Streamlined quote request flow' },
-      { label: 'Desktop & Mobile UI', value: 'Balanced', context: 'Responsive architectural layout' }
+      { label: 'System Type', value: 'Demo Prototype', context: 'Construction & architectural RFP portal concept' },
+      { label: 'Portfolio UX', value: 'Category Filtering', context: 'Commercial vs residential project breakdown' },
+      { label: 'Inquiry Form', value: 'RFP Submission', context: 'Detailed commercial tender quote request' }
     ],
     capabilities: [
       'High-Resolution Construction Portfolio',
@@ -500,19 +517,20 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
   'coaching-institute-demo': {
     slug: 'coaching-institute-demo',
     title: 'Apex Coaching Institute',
-    clientName: 'Apex Institute (Demo)',
+    clientName: 'Apex Institute (Concept Prototype)',
     industrySlug: 'coaching-centres',
     industryName: 'Coaching & Test Prep',
     serviceCategory: 'Education Portal & Admissions',
     category: 'demo',
-    tagline: 'Competitive Exam Prep & Demo Registration Portal',
+    isDemo: true,
+    tagline: 'Competitive Exam Prep & Demo Registration Portal Concept',
     summary: 'A specialized coaching institute prototype with test series information, topper highlights, downloadable syllabus PDFs, and demo bookings.',
     problem: 'Educational institutes must instill trust in parents by showcasing verifiable student rank achievements and organized course schedules.',
-    solution: 'Designed an institute portal with course search, topper result galleries, automated syllabus request buttons, and trial registrations.',
+    solution: 'Designed an institute portal prototype with course search, topper result galleries, automated syllabus request buttons, and trial registrations.',
     outcomes: [
-      { label: 'Student Lead Conversion', value: '+140%', context: 'Clear demo signup CTAs' },
-      { label: 'Syllabus Download UX', value: '1-Click', context: 'Instant PDF delivery' },
-      { label: 'Trust Building', value: 'Topper Proof', context: 'Rank achievement showcase' }
+      { label: 'System Type', value: 'Demo Prototype', context: 'Coaching institute portal & demo registration concept' },
+      { label: 'Feature', value: 'Topper Showcase', context: 'Visual student result and rank gallery' },
+      { label: 'Syllabus UX', value: '1-Click Download', context: 'Instant syllabus PDF delivery workflow' }
     ],
     capabilities: [
       'Topper Rank & Results Showcase',
@@ -529,19 +547,20 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
   'rjb-construction-demo': {
     slug: 'rjb-construction-demo',
     title: 'RJB Builders & Contractors',
-    clientName: 'RJB Builders (Demo)',
+    clientName: 'RJB Builders (Concept Prototype)',
     industrySlug: 'small-businesses',
     industryName: 'Construction & Building',
     serviceCategory: 'Contractor Portfolio & Consultation',
     category: 'demo',
-    tagline: 'Custom Home Builders & Renovation Portal',
-    summary: 'A clean, trustworthy website template for custom home builders and remodeling contractors seeking high-end residential clients.',
+    isDemo: true,
+    tagline: 'Custom Home Builders & Renovation Portal Concept',
+    summary: 'A clean, trustworthy website template concept for custom home builders and remodeling contractors seeking high-end residential clients.',
     problem: 'Home remodeling contractors need to showcase past floorplans, materials quality, and customer reviews to win client trust.',
-    solution: 'Created an elegant contractor website featuring project transformation showcases, process breakdowns, and consultation scheduling.',
+    solution: 'Created an elegant contractor website prototype featuring project transformation showcases, process breakdowns, and consultation scheduling.',
     outcomes: [
-      { label: 'Consultation Requests', value: '+125%', context: 'Targeted residential quote form' },
-      { label: 'Project Gallery UX', value: 'Interactive', context: 'Filtered build categories' },
-      { label: 'Trust Credentials', value: 'Licensed', context: 'Verified insurance & license badges' }
+      { label: 'System Type', value: 'Demo Prototype', context: 'Custom home builder & renovation template' },
+      { label: 'Core Module', value: 'Consultation Form', context: 'Residential remodeling quote request flow' },
+      { label: 'Trust Badges', value: 'License & Warranty', context: 'Verified license and compliance displays' }
     ],
     capabilities: [
       'Residential Remodeling Portfolio',
@@ -558,19 +577,20 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
   'dental-clinic-demo': {
     slug: 'dental-clinic-demo',
     title: 'SmileCare Dental Clinic',
-    clientName: 'SmileCare Dental (Demo)',
+    clientName: 'SmileCare Dental (Concept Prototype)',
     industrySlug: 'small-businesses',
     industryName: 'Healthcare & Dentistry',
     serviceCategory: 'Dental Clinic & Online Booking',
     category: 'demo',
-    tagline: 'Modern Dental Practice & Patient Appointment System',
-    summary: 'A welcoming, hygiene-focused dental clinic website with online appointment scheduling, service pricing guides, and patient reviews.',
+    isDemo: true,
+    tagline: 'Modern Dental Practice & Patient Appointment System Concept',
+    summary: 'A welcoming, hygiene-focused dental clinic website prototype with online appointment scheduling, service pricing guides, and patient reviews.',
     problem: 'Dental patients often experience anxiety and need clear treatment information, transparent pricing, and instant booking.',
-    solution: 'Built a soothing healthcare experience highlighting preventive/cosmetic dentistry, doctor profiles, and easy 2-step booking.',
+    solution: 'Built a soothing healthcare experience prototype highlighting preventive/cosmetic dentistry, doctor profiles, and easy 2-step booking.',
     outcomes: [
-      { label: 'Online Appointments', value: '+175%', context: 'Direct self-service patient booking' },
-      { label: 'Patient Retention', value: 'High', context: 'Automated appointment reminders' },
-      { label: 'Hygiene & Trust', value: 'Clear', context: 'Sterilization & safety credentialing' }
+      { label: 'System Type', value: 'Demo Prototype', context: 'Dental practice & appointment booking concept' },
+      { label: 'Booking UX', value: '2-Step Patient Form', context: 'Self-service appointment date & time selection' },
+      { label: 'Rate Card', value: 'Transparent Pricing', context: 'General & cosmetic dental service pricing guide' }
     ],
     capabilities: [
       '2-Step Patient Appointment Booking',
@@ -587,19 +607,20 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
   'india-watch-demo': {
     slug: 'india-watch-demo',
     title: 'The India Watch Advisory',
-    clientName: 'The India Watch (Demo)',
+    clientName: 'The India Watch (Concept Prototype)',
     industrySlug: 'small-businesses',
     industryName: 'Market Research & Advisory',
     serviceCategory: 'Corporate Intelligence & Insights Portal',
     category: 'demo',
-    tagline: 'Market Research & Business Advisory Insights Platform',
-    summary: 'An authoritative market research and business intelligence portal designed for strategic advisory firms and corporate analysts.',
+    isDemo: true,
+    tagline: 'Market Research & Business Advisory Insights Platform Concept',
+    summary: 'An authoritative market research and business intelligence portal prototype designed for strategic advisory firms and corporate analysts.',
     problem: 'Market research firms need a clean content architecture to publish industry reports, whitepapers, and advisory offerings.',
-    solution: 'Engineered a sophisticated insights portal featuring report search, industry coverage sectors, and corporate inquiry workflows.',
+    solution: 'Engineered a sophisticated insights portal prototype featuring report search, industry coverage sectors, and corporate inquiry workflows.',
     outcomes: [
-      { label: 'Report Inquiries', value: '+130%', context: 'Direct research request forms' },
-      { label: 'Content Authority', value: 'High', context: 'Structured publication hierarchy' },
-      { label: 'B2B Lead Flow', value: 'Qualified', context: 'Corporate consultation routing' }
+      { label: 'System Type', value: 'Demo Prototype', context: 'Corporate research & advisory portal concept' },
+      { label: 'Content UX', value: 'Report Directory', context: 'Industry sector toggles & whitepaper preview' },
+      { label: 'Lead Flow', value: 'Corporate Advisory Form', context: 'Structured B2B consultation request flow' }
     ],
     capabilities: [
       'Market Report Directory & Preview',

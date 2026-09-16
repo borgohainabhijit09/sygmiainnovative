@@ -18,6 +18,7 @@ export function ContactForm({ defaultRequirement, sourceContext, isModal = false
     phone: '',
     email: '',
     requirement: defaultRequirement || 'new-website',
+    budget: '15k-30k',
     message: ''
   });
 
@@ -68,7 +69,7 @@ export function ContactForm({ defaultRequirement, sourceContext, isModal = false
 
       // If server API route is 404 (e.g. Hostinger static HTML hosting), fallback to direct Resend API call
       if (!response || response.status === 404) {
-        const resendApiKey = process.env.NEXT_PUBLIC_RESEND_API_KEY || (typeof window !== 'undefined' ? atob('cmVfNUtTSkdiRnNfTG1HVWtjUkpVTU0yQzZLaEU2OTlwV2lx') : '');
+        const resendApiKey = process.env.NEXT_PUBLIC_RESEND_API_KEY || (typeof window !== 'undefined' ? atob('cmVfNUtTSkdiRnNfTG1HVWtjUkpVTU0yQzZLaEU2OTlwV2iq') : '');
         const directEmailRes = await fetch('https://api.resend.com/emails', {
           method: 'POST',
           headers: {
@@ -84,11 +85,13 @@ export function ContactForm({ defaultRequirement, sourceContext, isModal = false
                 <h2 style="color: #4f46e5;">🚀 New Lead Received — Sygmia Innovative</h2>
                 <p><strong>Name:</strong> ${formData.name}</p>
                 <p><strong>Business / Organization:</strong> ${formData.businessName}</p>
-                <p><strong>Phone / WhatsApp:</strong> <a href="tel:${formData.phone}">${formData.phone}</a></p>
+                <p><strong>WhatsApp / Phone:</strong> <a href="tel:${formData.phone}">${formData.phone}</a></p>
                 <p><strong>Email Address:</strong> <a href="mailto:${formData.email}">${formData.email}</a></p>
                 <p><strong>Requirement:</strong> ${formData.requirement}</p>
-                <p><strong>Message:</strong> ${formData.message}</p>
+                <p><strong>Approximate Budget:</strong> ${formData.budget}</p>
+                <p><strong>Project Details:</strong> ${formData.message}</p>
                 <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 20px 0;" />
+                <p style="font-size: 11px; color: #6b7280;">UTM Source: ${utmParams.utm_source || 'direct'} | Campaign: ${utmParams.utm_campaign || 'none'}</p>
                 <p style="font-size: 11px; color: #6b7280;">Sent via Sygmia Web Direct Dispatch • Hostinger Deployment</p>
               </div>
             `
@@ -138,23 +141,23 @@ export function ContactForm({ defaultRequirement, sourceContext, isModal = false
 
   if (status === 'success') {
     return (
-      <div className={`glass-card ${isModal ? 'p-6 space-y-4' : 'p-8 sm:p-10 space-y-6'} border border-emerald-500/30 text-center animate-in fade-in zoom-in-95 duration-300`}>
+      <div className={`glass-card ${isModal ? 'p-6 space-y-4' : 'p-8 sm:p-10 space-y-6'} border border-emerald-500/30 text-center animate-in fade-in zoom-in-95 duration-300 bg-[#0b0f17]/95`}>
         <div className="w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto border border-emerald-500/30">
           <CheckCircle2 className="w-6 h-6" />
         </div>
-        <div className="space-y-1">
-          <h3 className="text-xl font-bold text-white">Enquiry Received!</h3>
-          <p className="text-slate-300 text-xs max-w-md mx-auto leading-relaxed">
-            Thank you for reaching out. We have received your details and will get back to you within 24 hours.
+        <div className="space-y-2">
+          <h3 className="text-xl sm:text-2xl font-bold text-white">Your enquiry has been received.</h3>
+          <p className="text-slate-300 text-xs sm:text-sm max-w-md mx-auto leading-relaxed">
+            Thank you for reaching out. Tell us what you&apos;re trying to improve — we will review your details and get back to you within 24 hours.
           </p>
         </div>
         <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
           <button 
             onClick={() => {
               setStatus('idle');
-              setFormData({ name: '', businessName: '', phone: '', email: '', requirement: 'new-website', message: '' });
+              setFormData({ name: '', businessName: '', phone: '', email: '', requirement: 'new-website', budget: '15k-30k', message: '' });
             }}
-            className="btn-secondary text-xs py-2 px-4"
+            className="btn-secondary text-xs py-2.5 px-4 cursor-pointer"
           >
             Send Another Enquiry
           </button>
@@ -162,7 +165,7 @@ export function ContactForm({ defaultRequirement, sourceContext, isModal = false
             href="https://wa.me/919113067486?text=Hello%20Sygmia%20Innovative,%20I'd%20like%20to%20discuss%20my%20enquiry."
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary text-xs py-2 px-4 bg-emerald-600 hover:bg-emerald-500"
+            className="btn-primary text-xs py-2.5 px-4 bg-emerald-600 hover:bg-emerald-500 flex items-center gap-1.5"
           >
             <MessageSquare className="w-3.5 h-3.5" /> Message on WhatsApp
           </a>
@@ -171,8 +174,8 @@ export function ContactForm({ defaultRequirement, sourceContext, isModal = false
     );
   }
 
-  const containerPadding = isModal ? 'p-4 sm:p-6 space-y-3' : 'p-6 sm:p-8 space-y-6';
-  const inputPadding = isModal ? 'px-3 py-1.5 text-xs' : 'px-4 py-2.5 text-sm';
+  const containerPadding = isModal ? 'p-4 sm:p-6 space-y-3' : 'p-6 sm:p-8 space-y-5';
+  const inputPadding = isModal ? 'px-3 py-1.5 text-xs' : 'px-4 py-2 text-xs sm:text-sm';
   const labelTextSize = 'text-[11px] font-semibold text-slate-300';
 
   return (
@@ -180,7 +183,7 @@ export function ContactForm({ defaultRequirement, sourceContext, isModal = false
       {!isModal && (
         <div className="space-y-1">
           <h3 className="text-xl font-bold text-white">Start a Conversation</h3>
-          <p className="text-xs text-slate-400">Tell us what you're trying to achieve. No technical spec required.</p>
+          <p className="text-xs text-slate-400">Tell us what you&apos;re trying to improve. We&apos;ll help you figure out what you need.</p>
         </div>
       )}
 
@@ -190,14 +193,14 @@ export function ContactForm({ defaultRequirement, sourceContext, isModal = false
           <div className="space-y-0.5">
             <p>{errorMessage}</p>
             <p className="text-slate-400 text-[11px]">
-              Need help? Message us directly on{' '}
+              Need immediate help? Message us directly on{' '}
               <a 
                 href="https://wa.me/919113067486?text=Hello%20Sygmia%20Innovative,%20I'd%20like%20to%20talk%20about%20a%20project." 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="text-emerald-400 underline"
+                className="text-emerald-400 underline font-semibold"
               >
-                WhatsApp
+                WhatsApp (+91 91130 67486)
               </a>.
             </p>
           </div>
@@ -207,7 +210,7 @@ export function ContactForm({ defaultRequirement, sourceContext, isModal = false
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         {/* Name */}
         <div className="space-y-1">
-          <label htmlFor="name" className={labelTextSize}>Your Name *</label>
+          <label htmlFor="name" className={labelTextSize}>Name *</label>
           <input
             type="text"
             id="name"
@@ -239,7 +242,7 @@ export function ContactForm({ defaultRequirement, sourceContext, isModal = false
 
         {/* Phone */}
         <div className="space-y-1">
-          <label htmlFor="phone" className={labelTextSize}>Phone / WhatsApp *</label>
+          <label htmlFor="phone" className={labelTextSize}>WhatsApp Number *</label>
           <input
             type="tel"
             id="phone"
@@ -270,37 +273,57 @@ export function ContactForm({ defaultRequirement, sourceContext, isModal = false
         </div>
       </div>
 
-      {/* Requirement Selector */}
-      <div className="space-y-1">
-        <label htmlFor="requirement" className={labelTextSize}>What are you looking to solve? *</label>
-        <select
-          id="requirement"
-          name="requirement"
-          value={formData.requirement}
-          onChange={handleChange}
-          className={`w-full rounded-xl bg-[#0b0f17] border border-white/10 text-white focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all ${inputPadding}`}
-        >
-          <option value="new-website">Build a new business website (Get Online)</option>
-          <option value="website-redesign">Redesign/optimize an existing website (Improve)</option>
-          <option value="business-automation">Automate manual workflows & WhatsApp (Automate)</option>
-          <option value="custom-software">Build custom internal software or portal</option>
-          <option value="ecommerce">Online store / E-commerce setup</option>
-          <option value="not-sure">Not sure yet — I need advice</option>
-          <option value="something-else">Something else</option>
-        </select>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        {/* What do you need? */}
+        <div className="space-y-1">
+          <label htmlFor="requirement" className={labelTextSize}>What do you need? *</label>
+          <select
+            id="requirement"
+            name="requirement"
+            value={formData.requirement}
+            onChange={handleChange}
+            className={`w-full rounded-xl bg-[#0b0f17] border border-white/10 text-white focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all ${inputPadding}`}
+          >
+            <option value="new-website">New Website</option>
+            <option value="website-redesign">Website Redesign</option>
+            <option value="ecommerce">E-commerce Website</option>
+            <option value="restaurant-website">Restaurant Website</option>
+            <option value="business-automation">Business Automation</option>
+            <option value="custom-software">Custom Business Software</option>
+            <option value="something-else">Something Else</option>
+            <option value="not-sure">Not Sure Yet</option>
+          </select>
+        </div>
+
+        {/* Approximate Budget */}
+        <div className="space-y-1">
+          <label htmlFor="budget" className={labelTextSize}>Approximate Budget</label>
+          <select
+            id="budget"
+            name="budget"
+            value={formData.budget}
+            onChange={handleChange}
+            className={`w-full rounded-xl bg-[#0b0f17] border border-white/10 text-white focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all ${inputPadding}`}
+          >
+            <option value="under-15k">Under ₹15K</option>
+            <option value="15k-30k">₹15K–₹30K</option>
+            <option value="30k-50k">₹30K–₹50K</option>
+            <option value="50k-plus">₹50K+</option>
+          </select>
+        </div>
       </div>
 
-      {/* Message */}
+      {/* Project Details */}
       <div className="space-y-1">
-        <label htmlFor="message" className={labelTextSize}>Tell us about your business & goals *</label>
+        <label htmlFor="message" className={labelTextSize}>Project Details *</label>
         <textarea
           id="message"
           name="message"
-          rows={isModal ? 2 : 4}
+          rows={isModal ? 2 : 3}
           required
           value={formData.message}
           onChange={handleChange}
-          placeholder="Briefly describe your goals or challenges..."
+          placeholder="Tell us what you're trying to build or improve..."
           className={`w-full rounded-xl bg-white/5 border border-white/10 text-white focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all placeholder:text-slate-500 ${inputPadding}`}
         />
         {validationErrors.message && <p className="text-[10px] text-red-400">{validationErrors.message}</p>}
@@ -309,16 +332,16 @@ export function ContactForm({ defaultRequirement, sourceContext, isModal = false
       <button
         type="submit"
         disabled={status === 'submitting'}
-        className={`btn-primary w-full flex items-center justify-center gap-2 cursor-pointer ${isModal ? 'py-2.5 text-xs font-semibold' : 'py-3 text-sm'}`}
+        className={`btn-primary w-full flex items-center justify-center gap-2 cursor-pointer ${isModal ? 'py-2.5 text-xs font-semibold' : 'py-3 text-sm font-semibold'}`}
       >
         {status === 'submitting' ? (
           <>
             <Loader2 className="w-4 h-4 animate-spin" />
-            <span>Sending Enquiry...</span>
+            <span>Submitting Enquiry...</span>
           </>
         ) : (
           <>
-            <span>Send Enquiry</span>
+            <span>Get Started</span>
             <Send className="w-3.5 h-3.5" />
           </>
         )}
@@ -326,7 +349,7 @@ export function ContactForm({ defaultRequirement, sourceContext, isModal = false
 
       {!isModal && (
         <p className="text-[11px] text-slate-500 text-center">
-          🔒 We respect your privacy. No spam. Your information is strictly used to evaluate your business enquiry.
+          🔒 We respect your privacy. Your information is strictly used to evaluate your business enquiry.
         </p>
       )}
     </form>
