@@ -149,6 +149,7 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     featured: false,
     websiteUrl: 'https://singpho.in/',
+    imageUrl: '/images/projects/singpho-tea.png',
     seoTitle: 'Singpho Heritage Tea Case Study | Sygmia Innovative',
     metaDescription: 'Discover how Sygmia created Singpho Heritage Tea’s e-commerce platform and brand story portal.'
   },
@@ -179,6 +180,7 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     featured: false,
     websiteUrl: 'https://cracademy.co.in/',
+    imageUrl: '/images/projects/cr-academy.png',
     seoTitle: 'CR Academy Case Study — Student Onboarding Portal | Sygmia',
     metaDescription: 'Learn how Sygmia developed CR Academy’s student onboarding portal and admission lead automation.'
   },
@@ -209,6 +211,7 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     featured: false,
     websiteUrl: 'https://bamboho.in/',
+    imageUrl: '/images/projects/bambooho-eco.png',
     seoTitle: 'Bambooho Case Study — Eco E-Commerce Storefront | Sygmia',
     metaDescription: 'See how Sygmia built Bambooho’s eco-friendly e-commerce store and B2B wholesale platform.'
   },
@@ -239,6 +242,7 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     featured: false,
     websiteUrl: 'https://tiphao.in/',
+    imageUrl: '/images/projects/resto-buddy.png',
     seoTitle: 'Tiphao Case Study — Direct Food Ordering Portal | Sygmia',
     metaDescription: 'Explore how Sygmia engineered Tiphao’s digital food menu and direct WhatsApp ordering system.'
   },
@@ -269,6 +273,7 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     featured: false,
     websiteUrl: 'https://royalsiangacademy.com/',
+    imageUrl: '/images/projects/cr-academy.png',
     seoTitle: 'Royal Siang Academy Case Study — Education Portal | Sygmia',
     metaDescription: 'See how Sygmia built Royal Siang Academy’s institutional website and admission management system.'
   },
@@ -299,6 +304,7 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     featured: false,
     websiteUrl: 'https://salcoaching.in/',
+    imageUrl: '/images/projects/cr-academy.png',
     seoTitle: 'Sal Coaching Case Study — Institute Web System | Sygmia',
     metaDescription: 'Learn how Sygmia built Sal Coaching’s institute website and demo registration system.'
   },
@@ -331,6 +337,7 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     featured: false,
     websiteUrl: 'https://business-demo.sygmiainnovative.co.in/',
+    imageUrl: '/images/projects/buzz-firm.png',
     seoTitle: 'Buzz Firm Corporate Demo | Sygmia Innovative',
     metaDescription: 'Explore Sygmia’s corporate consulting and B2B agency web system prototype.'
   },
@@ -361,6 +368,7 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     featured: false,
     websiteUrl: 'https://multi-cousine-restaurant-demo.sygmiainnovative.co.in/',
+    imageUrl: '/images/projects/resto-buddy.png',
     seoTitle: 'Multi-Cuisine Restaurant Demo | Sygmia Innovative',
     metaDescription: 'Try Sygmia’s interactive multi-cuisine restaurant digital menu and table reservation system.'
   },
@@ -391,6 +399,7 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     featured: false,
     websiteUrl: 'https://annapurna.sygmiainnovative.co.in/',
+    imageUrl: '/images/projects/resto-buddy.png',
     seoTitle: 'Annapurna South Indian Dining Demo | Sygmia Innovative',
     metaDescription: 'Explore Annapurna South Indian dining digital menu and WhatsApp ordering prototype.'
   },
@@ -421,6 +430,7 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     featured: false,
     websiteUrl: 'https://medicax-hospital.sygmiainnovative.co.in/',
+    imageUrl: '/images/projects/dental-clinic.png',
     seoTitle: 'Medicax Hospital Demo | Sygmia Innovative',
     metaDescription: 'Experience Medicax Hospital’s healthcare portal and doctor appointment booking system prototype.'
   },
@@ -451,6 +461,7 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     featured: false,
     websiteUrl: 'https://acrepair-demo.cybkartglobal.com/',
+    imageUrl: '/images/projects/buzz-firm.png',
     seoTitle: 'AC Repair & HVAC Services Demo | Sygmia Innovative',
     metaDescription: 'Explore Sygmia’s AC repair and HVAC emergency service booking portal prototype.'
   },
@@ -481,6 +492,7 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     featured: false,
     websiteUrl: 'https://pest-control.cybkartglobal.com/',
+    imageUrl: '/images/projects/buzz-firm.png',
     seoTitle: 'PestShield Control Services Demo | Sygmia Innovative',
     metaDescription: 'Try Sygmia’s pest control inspection request and local service web prototype.'
   },
@@ -511,6 +523,7 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     featured: false,
     websiteUrl: 'https://royal-arc-demo.vercel.app/',
+    imageUrl: '/images/projects/julie-hull.png',
     seoTitle: 'Royal Arc Construction Demo | Sygmia Innovative',
     metaDescription: 'Explore Royal Arc Construction’s architectural showcase and project RFP portal prototype.'
   },
@@ -541,6 +554,7 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     featured: false,
     websiteUrl: 'https://coaching-institute-demo.vercel.app/',
+    imageUrl: '/images/projects/cr-academy.png',
     seoTitle: 'Apex Coaching Institute Demo | Sygmia Innovative',
     metaDescription: 'Try Sygmia’s competitive coaching institute website and student admission portal prototype.'
   },
@@ -571,6 +585,7 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     featured: false,
     websiteUrl: 'https://rjb-construction.vercel.app/',
+    imageUrl: '/images/projects/julie-hull.png',
     seoTitle: 'RJB Builders & Contractors Demo | Sygmia Innovative',
     metaDescription: 'See Sygmia’s custom home builder and renovation contractor web portal prototype.'
   },
@@ -601,6 +616,7 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     featured: false,
     websiteUrl: 'https://dental-clinic-lovat.vercel.app/',
+    imageUrl: '/images/projects/dental-clinic.png',
     seoTitle: 'SmileCare Dental Clinic Demo | Sygmia Innovative',
     metaDescription: 'Try Sygmia’s dental clinic website and patient appointment booking system prototype.'
   },
@@ -631,6 +647,7 @@ export const WORK_DATA: Record<string, CaseStudyItem> = {
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
     featured: false,
     websiteUrl: 'https://the-india-watch.vercel.app/',
+    imageUrl: '/images/projects/buzz-firm.png',
     seoTitle: 'The India Watch Advisory Demo | Sygmia Innovative',
     metaDescription: 'Explore The India Watch market research and corporate advisory web system prototype.'
   }

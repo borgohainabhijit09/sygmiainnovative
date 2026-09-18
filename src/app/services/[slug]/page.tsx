@@ -21,7 +21,7 @@ import { WORK_DATA } from '@/content/work';
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 import { JsonLd, generateServiceSchema, generateFaqSchema } from '@/components/seo/JsonLd';
 import { StartConversationButton } from '@/components/buttons/StartConversationButton';
-import { ProjectProof } from '@/components/proof/ProjectProof';
+import { ServiceProofSection } from '@/components/proof/ServiceProofSection';
 
 export async function generateStaticParams() {
   return Object.keys(SERVICES_DATA).map((slug) => ({ slug }));
@@ -215,26 +215,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       </section>
 
       {/* PROOF OF WORK SECTION */}
-      {projectProofItem && (
-        <section className="space-y-6">
-          <div className="space-y-2">
-            <span className="badge-indigo">Proof of Work</span>
-            <h2 className="text-3xl font-bold text-white tracking-tight">See what this can look like</h2>
-            <p className="text-xs text-slate-400">Genuine project architecture built by Sygmia.</p>
-          </div>
-          <ProjectProof
-            projectName={projectProofItem.title}
-            projectType={projectProofItem.serviceCategory}
-            industry={projectProofItem.industryName}
-            screenshot={projectProofItem.imageUrl}
-            description={projectProofItem.summary}
-            liveUrl={projectProofItem.websiteUrl}
-            caseStudyUrl={`/work/${projectProofItem.slug}`}
-            isDemo={projectProofItem.isDemo}
-            outcomes={projectProofItem.outcomes}
-          />
-        </section>
-      )}
+      <ServiceProofSection serviceSlug={service.slug} serviceName={service.name} />
 
       {/* 4. DELIVERABLES MATRIX */}
       <section id="deliverables" className="glass-card p-8 sm:p-12 border border-white/10 space-y-8">

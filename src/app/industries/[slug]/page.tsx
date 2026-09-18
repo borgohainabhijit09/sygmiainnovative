@@ -302,6 +302,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ slug:
             caseStudyUrl={`/work/${featuredProject.slug}`}
             isDemo={featuredProject.isDemo}
             outcomes={featuredProject.outcomes}
+            capabilities={featuredProject.capabilities}
           />
         </section>
       )}
